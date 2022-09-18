@@ -8,7 +8,27 @@ body {
   );
   background-repeat: no-repeat;
   background-size: 100% 4500px;
+  -webkit-animation: fadeEffect 6s;
+  animation: fadeEffect 6s;
 }
+
+@-webkit-keyframes fadeEffect {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fadeEffect {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
 @font-face {
   font-family: "Ikaros-regular";
   src: url(/fonts/Ikaros-Regular.otf);
@@ -24,6 +44,7 @@ body {
   color: rgb(233, 233, 233);
   text-align: center;
   text-shadow: 110px 40px 5px #ff99cc36, -80px -40px 5px #64a5b739;
+  transition: text-shadow 2.5s;
   margin-bottom: 0px;
 }
 
@@ -62,38 +83,6 @@ img {
   padding-bottom: 20px;
 }
 
-.button-down {
-  position: relative;
-  padding: 5px;
-  margin: 30px auto;
-  background: rgb(0, 0, 0);
-  height: 50px;
-  width: 50px;
-  border-radius: 50%;
-  transition: all 0.2s linear;
-}
-
-.button-down:hover {
-  transform: translate3d(0, 10px, 0);
-}
-
-.button-down::after {
-  content: "";
-  position: absolute;
-  left: 17px;
-  z-index: 11;
-  display: block;
-  width: 25px;
-  height: 25px;
-  border-top: 2px solid #fff;
-  border-left: 2px solid #fff;
-}
-
-.button-down::after {
-  top: 10px;
-  transform: rotate(225deg);
-}
-
 #titleme {
   font-family: "Ikaros-regular";
   font-size: 80px;
@@ -114,7 +103,6 @@ img {
   background-color: rgba(245, 245, 245, 0.24);
   border-radius: 50%;
   margin-left: 100px;
-  /*margin-right: 20px;*/
   width: 600px;
   height: 600px;
   margin-top: 100px;

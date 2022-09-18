@@ -1,0 +1,258 @@
+body {
+  background-image: linear-gradient(to top right, rgb(79, 83, 102) 30%, rgb(45, 50, 69) 30%, rgb(45, 50, 69) 80%, rgb(79, 83, 102) 80%);
+  background-repeat: no-repeat;
+  background-size: 100% 4500px;
+  -webkit-animation: fadeEffect 6s;
+  animation: fadeEffect 6s;
+}
+
+@-webkit-keyframes fadeEffect {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fadeEffect {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@font-face {
+  font-family: "Ikaros-regular";
+  src: url(/fonts/Ikaros-Regular.otf);
+}
+@font-face {
+  font-family: "Ikaros-light";
+  src: url(/fonts/Ikaros-Light.otf);
+}
+#welcome {
+  font-family: "Ikaros-regular";
+  font-size: 80px;
+  color: rgb(233, 233, 233);
+  text-align: center;
+  text-shadow: 110px 40px 5px rgba(255, 153, 204, 0.2117647059), -80px -40px 5px rgba(100, 165, 183, 0.2235294118);
+  transition: text-shadow 2.5s;
+  margin-bottom: 0px;
+}
+
+.main-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 500px;
+}
+
+nav {
+  display: flex;
+  margin-left: auto;
+  justify-content: end;
+  width: 600px;
+  margin-top: 20px;
+  padding-top: 10px;
+}
+
+img {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  box-shadow: -5px 5px 20px rgb(32, 32, 32);
+}
+
+#bilden {
+  align-self: flex-start;
+  width: 400px;
+  margin-left: 15px;
+  margin-top: 5px;
+  position: absolute;
+}
+
+#arrow {
+  margin-top: 20px;
+  padding-bottom: 20px;
+}
+
+#titleme {
+  font-family: "Ikaros-regular";
+  font-size: 80px;
+  color: rgb(66, 65, 65);
+  text-align: center;
+  margin: auto;
+}
+
+.info {
+  font-family: "Ikaros-light";
+  font-size: 70px;
+  color: rgb(41, 40, 40);
+  text-align: center;
+  margin-bottom: 0px;
+  padding-top: 100px;
+}
+
+#who {
+  background-color: rgba(245, 245, 245, 0.24);
+  border-radius: 50%;
+  margin-left: 100px;
+  width: 600px;
+  height: 600px;
+  margin-top: 100px;
+  margin-bottom: 100px;
+  box-shadow: -3px 3px 10px rgb(33, 32, 32);
+  text-shadow: -10px 10px 15px rgb(42, 41, 41);
+}
+
+#projects {
+  background-color: rgba(245, 245, 245, 0.24);
+  border-radius: 50%;
+  margin-left: 820px;
+  width: 600px;
+  height: 600px;
+  margin-top: 190px;
+  text-shadow: -10px 10px 12px rgb(42, 41, 41);
+}
+
+#circle {
+  background-color: rgba(255, 153, 204, 0.2078431373);
+  border-radius: 50%;
+  margin-left: 770px;
+  width: 600px;
+  height: 600px;
+  margin-top: 110px;
+  position: absolute;
+  box-shadow: -3px 3px 10px rgb(33, 32, 32);
+}
+
+#cv {
+  background-color: rgba(100, 165, 183, 0.2235294118);
+  border-radius: 20px 200px 20px 200px;
+  margin-left: 350px;
+  margin-right: 350px;
+  box-shadow: -3px 3px 20px rgb(33, 32, 32);
+  margin-top: 400px;
+  position: relative;
+  text-align: center;
+  padding-bottom: 30px;
+  width: 800px;
+}
+
+#cv h2 {
+  font-family: "Ikaros-light";
+  font-size: 70px;
+  color: rgb(41, 40, 40);
+  margin-bottom: 0px;
+  padding-top: 30px;
+  text-shadow: -10px 10px 15px rgb(42, 41, 41);
+}
+
+#contact {
+  background-color: rgba(255, 153, 204, 0.2078431373);
+  border-radius: 20px 100px 100px 20px;
+  margin: auto;
+  margin-top: 400px;
+  text-align: center;
+  margin-bottom: 100px;
+  width: 800px;
+  box-shadow: -3px 3px 20px rgb(33, 32, 32);
+  height: 500px;
+}
+
+#contact h2 {
+  font-family: "Ikaros-light";
+  font-size: 70px;
+  color: rgb(41, 40, 40);
+  margin-bottom: 0px;
+  margin-top: 2px;
+  text-shadow: -10px 10px 15px rgb(42, 41, 41);
+}
+
+a {
+  padding: 30px;
+  font-family: "Ikaros-light";
+  color: rgb(245, 240, 240);
+  font-size: 30px;
+  text-shadow: -3px 3px 8px rgb(42, 41, 41);
+}
+
+a:hover {
+  padding: 30px;
+  font-family: "Ikaros-light";
+  color: rgb(181, 175, 175);
+  font-size: 30px;
+}
+
+p {
+  font-family: "ikaros-light";
+  font-size: 30px;
+  color: rgb(233, 233, 233);
+  text-align: center;
+  margin-top: 0px;
+  text-shadow: -3px 3px 8px rgb(42, 41, 41);
+}
+
+#first-text {
+  width: 500px;
+  text-align: left;
+  margin: auto;
+  margin-top: 30px;
+  text-shadow: -10px 10px 12px rgb(42, 41, 41);
+}
+
+#second-text {
+  width: 500px;
+  text-align: left;
+  margin: auto;
+  margin-top: 50px;
+  text-shadow: -10px 10px 12px rgb(42, 41, 41);
+}
+
+#third-text {
+  width: 500px;
+  text-align: left;
+  margin: auto;
+  margin-top: 0px;
+  margin-bottom: 30px;
+  text-shadow: -10px 10px 12px rgb(42, 41, 41);
+}
+
+#fourth-text {
+  width: 500px;
+  text-align: center;
+  margin: auto;
+  padding-top: 20px;
+  margin-bottom: 0px;
+  text-shadow: -10px 10px 12px rgb(42, 41, 41);
+}
+
+#listan {
+  font-family: "ikaros-light";
+  font-size: 30px;
+  text-align: left;
+  margin: auto;
+  color: rgb(174, 178, 192);
+  text-shadow: -10px 10px 12px rgb(42, 41, 41);
+  position: absolute;
+  margin-top: 300px;
+  margin-left: 300px;
+}
+
+#mail {
+  font-size: 20px;
+  color: rgb(233, 233, 233);
+  font-family: "ikaros-light";
+}
+
+#form {
+  border-radius: 10px;
+}
+
+#bottom {
+  text-align: right;
+}
+
+#whotop {
+  text-align: right;
+}/*# sourceMappingURL=style.css.map */

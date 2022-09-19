@@ -1,0 +1,29 @@
+// KEY FRAMES //
+
+@-webkit-keyframes fadeEffect {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fadeEffect {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+// FONTS //
+
+@font-face {
+  font-family: "Ikaros-regular";
+  src: url(/fonts/Ikaros-Regular.otf);
+}
+@font-face {
+  font-family: "Ikaros-light";
+  src: url(/fonts/Ikaros-Light.otf);
+}

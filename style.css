@@ -1,11 +1,3 @@
-body {
-  background-image: linear-gradient(to top right, rgb(79, 83, 102) 30%, rgb(45, 50, 69) 30%, rgb(45, 50, 69) 80%, rgb(79, 83, 102) 80%);
-  background-repeat: no-repeat;
-  background-size: 100% 4500px;
-  -webkit-animation: fadeEffect 6s;
-  animation: fadeEffect 6s;
-}
-
 @-webkit-keyframes fadeEffect {
   from {
     opacity: 0;
@@ -30,13 +22,24 @@ body {
   font-family: "Ikaros-light";
   src: url(/fonts/Ikaros-Light.otf);
 }
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 99%;
+  background-image: linear-gradient(to top right, rgb(79, 83, 102) 30%, rgb(45, 50, 69) 30%);
+  background-repeat: no-repeat;
+  -webkit-animation: fadeEffect 4s;
+  animation: fadeEffect 3s;
+}
+
 #welcome {
   font-family: "Ikaros-regular";
   font-size: 80px;
   color: rgb(233, 233, 233);
   text-align: center;
   text-shadow: 110px 40px 5px rgba(255, 153, 204, 0.2117647059), -80px -40px 5px rgba(100, 165, 183, 0.2235294118);
-  transition: text-shadow 2.5s;
+  transition: text-shadow 4s;
   margin-bottom: 0px;
 }
 
@@ -47,33 +50,48 @@ body {
   height: 500px;
 }
 
-nav {
+header {
   display: flex;
-  margin-left: auto;
-  justify-content: end;
-  width: 600px;
-  margin-top: 20px;
-  padding-top: 10px;
+  flex-direction: row;
+  justify-content: space-between;
 }
-
-img {
-  width: 250px;
-  height: 250px;
-  border-radius: 50%;
-  box-shadow: -5px 5px 20px rgb(32, 32, 32);
+header nav {
+  display: flex;
+  max-width: 45%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  border-radius: 10px;
+  background-color: rgb(79, 83, 102);
+  box-shadow: -1px 1px 10px rgb(0, 0, 0);
 }
-
-#bilden {
-  align-self: flex-start;
-  width: 400px;
+header nav a {
+  display: flex;
+  padding: 30px;
+  font-family: "Ikaros-light";
+  color: rgb(245, 240, 240);
+  font-size: 30px;
+  text-shadow: -3px 3px 8px rgb(42, 41, 41);
+}
+header nav a:hover {
+  padding: 30px;
+  font-family: "Ikaros-light";
+  color: rgb(181, 175, 175);
+  font-size: 30px;
+}
+header #picture {
+  display: flex;
+  max-width: 400px;
   margin-left: 15px;
   margin-top: 5px;
-  position: absolute;
 }
-
-#arrow {
-  margin-top: 20px;
-  padding-bottom: 20px;
+header #picture img {
+  width: auto;
+  max-width: 250px;
+  height: auto;
+  max-height: 250px;
+  border-radius: 50%;
+  box-shadow: -5px 5px 20px rgb(32, 32, 32);
 }
 
 #titleme {
@@ -94,35 +112,52 @@ img {
 }
 
 #who {
+  display: flex;
+  flex-direction: column;
   background-color: rgba(245, 245, 245, 0.24);
   border-radius: 50%;
   margin-left: 100px;
-  width: 600px;
-  height: 600px;
+  max-width: 600px;
+  height: auto;
+  max-height: 600px;
   margin-top: 100px;
   margin-bottom: 100px;
   box-shadow: -3px 3px 10px rgb(33, 32, 32);
   text-shadow: -10px 10px 15px rgb(42, 41, 41);
 }
 
-#projects {
+.projects {
+  display: flex;
+  flex-direction: row;
+}
+.projects #projects {
+  display: flex;
   background-color: rgba(245, 245, 245, 0.24);
   border-radius: 50%;
-  margin-left: 820px;
-  width: 600px;
   height: 600px;
   margin-top: 190px;
   text-shadow: -10px 10px 12px rgb(42, 41, 41);
 }
-
-#circle {
+.projects #listan {
+  font-family: "ikaros-light";
+  font-size: 30px;
+  text-align: left;
+  color: rgb(174, 178, 192);
+  text-shadow: -10px 10px 12px rgb(42, 41, 41);
+  position: absolute;
+  margin-top: 300px;
+  margin-left: 300px;
+}
+.projects #circle {
+  display: flex;
+  flex-direction: column;
   background-color: rgba(255, 153, 204, 0.2078431373);
   border-radius: 50%;
-  margin-left: 770px;
-  width: 600px;
-  height: 600px;
+  max-width: 600px;
+  height: auto;
+  max-width: 600px;
   margin-top: 110px;
-  position: absolute;
+  position: relative;
   box-shadow: -3px 3px 10px rgb(33, 32, 32);
 }
 
@@ -136,7 +171,6 @@ img {
   position: relative;
   text-align: center;
   padding-bottom: 30px;
-  width: 800px;
 }
 
 #cv h2 {
@@ -155,7 +189,6 @@ img {
   margin-top: 400px;
   text-align: center;
   margin-bottom: 100px;
-  width: 800px;
   box-shadow: -3px 3px 20px rgb(33, 32, 32);
   height: 500px;
 }
@@ -169,7 +202,7 @@ img {
   text-shadow: -10px 10px 15px rgb(42, 41, 41);
 }
 
-a {
+/*a {
   padding: 30px;
   font-family: "Ikaros-light";
   color: rgb(245, 240, 240);
@@ -182,8 +215,7 @@ a:hover {
   font-family: "Ikaros-light";
   color: rgb(181, 175, 175);
   font-size: 30px;
-}
-
+}*/
 p {
   font-family: "ikaros-light";
   font-size: 30px;
@@ -194,7 +226,6 @@ p {
 }
 
 #first-text {
-  width: 500px;
   text-align: left;
   margin: auto;
   margin-top: 30px;
@@ -202,7 +233,6 @@ p {
 }
 
 #second-text {
-  width: 500px;
   text-align: left;
   margin: auto;
   margin-top: 50px;
@@ -210,7 +240,6 @@ p {
 }
 
 #third-text {
-  width: 500px;
   text-align: left;
   margin: auto;
   margin-top: 0px;
@@ -219,24 +248,11 @@ p {
 }
 
 #fourth-text {
-  width: 500px;
   text-align: center;
   margin: auto;
   padding-top: 20px;
   margin-bottom: 0px;
   text-shadow: -10px 10px 12px rgb(42, 41, 41);
-}
-
-#listan {
-  font-family: "ikaros-light";
-  font-size: 30px;
-  text-align: left;
-  margin: auto;
-  color: rgb(174, 178, 192);
-  text-shadow: -10px 10px 12px rgb(42, 41, 41);
-  position: absolute;
-  margin-top: 300px;
-  margin-left: 300px;
 }
 
 #mail {

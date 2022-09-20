@@ -1,39 +1,38 @@
 @import "_rules.scss";
-@import "_mixings.scss";
 @import "_variables.scss";
 
 body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  width: 99%;
   background-image: linear-gradient(
     to top right,
-    rgb(79, 83, 102) 30%,
-    rgb(45, 50, 69) 30%
+    rgb(75, 79, 101) 15%,
+    rgb(45, 50, 69) 35%,
+    rgb(54, 58, 75) 65%,
+    rgb(56, 59, 75) 90%
   );
   background-repeat: no-repeat;
+  background-size: cover;
   -webkit-animation: fadeEffect 4s;
   animation: fadeEffect 3s;
 }
 
 header {
   display: flex;
-  flex-direction: row;
+  flex-direction: row wrap;
   justify-content: space-between;
   nav {
     display: flex;
-    max-width: 45%;
     height: fit-content;
-    border-radius: 10px;
-    background-color: rgb(79, 83, 102);
-    box-shadow: -1px 1px 10px rgb(0, 0, 0);
+    justify-content: space-between;
+    flex-wrap: wrap;
     a {
       display: flex;
       padding: 30px;
       font-family: "Ikaros-light";
       color: rgb(245, 240, 240);
-      font-size: 30px;
+      font-size: 3vw;
       text-shadow: -3px 3px 8px rgb(42, 41, 41);
     }
 
@@ -41,21 +40,22 @@ header {
       padding: 30px;
       font-family: "Ikaros-light";
       color: rgb(181, 175, 175);
-      font-size: 30px;
     }
   }
 
   #picture {
     display: flex;
-    max-width: 400px;
     margin-left: 15px;
     margin-top: 5px;
     img {
       width: auto;
-      max-width: 250px;
+      max-width: 15vw;
       height: auto;
-      max-height: 250px;
+      max-height: 15vw;
       border-radius: 50%;
+      box-shadow: -5px 5px 10px rgb(32, 32, 32);
+    }
+    img:hover {
       box-shadow: -5px 5px 20px rgb(32, 32, 32);
     }
   }
@@ -70,31 +70,33 @@ section {
 }
 
 #welcome-section {
+  align-items: center;
+  margin: 80px 0px 80px 0px;
   #welcome {
     font-size: 80px;
-    text-shadow: 110px 40px 5px #ff99cc36, -80px -40px 5px #64a5b739;
-    transition: text-shadow 1s inf;
-    margin-bottom: 0px;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    //text-shadow: -20px -20px 5px #ff99cc36, -80px -40px 5px #64a5b739;
+    // text-shadow: 110px 40px 5px #ff99cc36, -80px -40px 5px #64a5b739;
+    animation: shadow-loop 10s linear infinite;
+  }
+  h2 {
+    margin: 0px;
+  }
+  p {
+    margin: 0px;
   }
 }
 
 #about-me {
-  align-items: center;
+  margin-top: 30%;
+  margin-bottom: 30%;
+  margin-left: 5%;
+  margin-right: 5%;
+  border-radius: 10px 10px 10px 10px;
   background-color: rgba(245, 245, 245, 0.24);
-  border-radius: 50%;
-  margin-left: 100px;
-  max-width: 600px;
-  height: auto;
-  max-height: 600px;
-  margin-top: 100px;
-  margin-bottom: 100px;
   box-shadow: -3px 3px 10px rgb(33, 32, 32);
   text-shadow: -10px 10px 15px rgb(42, 41, 41);
-  h2 {
-    font-family: "Ikaros-regular";
-    color: rgb(233, 233, 233);
-    text-align: center;
-  }
 }
 
 .projects {
@@ -138,25 +140,20 @@ section {
 #cv {
   background-color: #64a5b739;
   border-radius: 20px 200px 20px 200px;
-  margin-left: 350px;
-  margin-right: 350px;
   box-shadow: -3px 3px 20px rgb(33, 32, 32);
-  margin-top: 400px;
+  margin-top: 30%;
+  margin-bottom: 30%;
   position: relative;
   text-align: center;
-  padding-bottom: 30px;
 }
 
 #contact {
   background-color: #ff99cc35;
   border-radius: 20px 100px 100px 20px;
-  margin: auto;
-  margin-top: 400px;
   text-align: center;
-  margin-bottom: 100px;
-
+  margin-bottom: 30%;
+  margin-top: 30%;
   box-shadow: -3px 3px 20px rgb(33, 32, 32);
-  height: 500px;
 }
 // DIVS //
 
@@ -170,9 +167,16 @@ section {
 
 p {
   font-family: "ikaros-light";
-  font-size: 30px;
+  font-size: 4vw;
   color: rgb(233, 233, 233);
+  text-align: center;
   text-shadow: -3px 3px 8px rgb(42, 41, 41);
+}
+
+h2 {
+  font-family: "Ikaros-regular";
+  color: rgb(233, 233, 233);
+  text-align: center;
 }
 
 #mail {

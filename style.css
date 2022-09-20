@@ -14,6 +14,88 @@
     opacity: 1;
   }
 }
+@-webkit-keyframes shadow-loop {
+  0% {
+    text-shadow: 20px 20px 5px rgba(255, 153, 204, 0.2117647059), -20px -20px 5px rgba(100, 165, 183, 0.2235294118);
+  }
+  8% {
+    text-shadow: 10px 25px 5px rgba(255, 153, 204, 0.2117647059), -10px -25px 5px rgba(100, 165, 183, 0.2235294118);
+  }
+  16% {
+    text-shadow: 0px 30px 5px rgba(255, 153, 204, 0.2117647059), 0px -30px 5px rgba(100, 165, 183, 0.2235294118);
+  }
+  24% {
+    text-shadow: -10px 25px 5px rgba(255, 153, 204, 0.2117647059), 10px -25px 5px rgba(100, 165, 183, 0.2235294118);
+  }
+  32% {
+    text-shadow: -20px 20px 5px rgba(255, 153, 204, 0.2117647059), 20px -20px 5px rgba(100, 165, 183, 0.2235294118);
+  }
+  40% {
+    text-shadow: -30px 0px 5px rgba(255, 153, 204, 0.2117647059), 30px 0px 5px rgba(100, 165, 183, 0.2235294118);
+  }
+  48% {
+    text-shadow: -20px -20px 5px rgba(255, 153, 204, 0.2117647059), 20px 20px 5px rgba(100, 165, 183, 0.2235294118);
+  }
+  56% {
+    text-shadow: -10px -25px 5px rgba(255, 153, 204, 0.2117647059), 10px 25px 5px rgba(100, 165, 183, 0.2235294118);
+  }
+  64% {
+    text-shadow: 0px -30px 5px rgba(255, 153, 204, 0.2117647059), 0px 30px 5px rgba(100, 165, 183, 0.2235294118);
+  }
+  72% {
+    text-shadow: 10px -25px 5px rgba(255, 153, 204, 0.2117647059), -10px 25px 5px rgba(100, 165, 183, 0.2235294118);
+  }
+  80% {
+    text-shadow: 20px -20px 5px rgba(255, 153, 204, 0.2117647059), -20px 20px 5px rgba(100, 165, 183, 0.2235294118);
+  }
+  88% {
+    text-shadow: 30px 0px 5px rgba(255, 153, 204, 0.2117647059), -30px 0px 5px rgba(100, 165, 183, 0.2235294118);
+  }
+  100% {
+    text-shadow: 20px 20px 5px rgba(255, 153, 204, 0.2117647059), -20px -20px 5px rgba(100, 165, 183, 0.2235294118);
+  }
+}
+@keyframes shadow-loop {
+  0% {
+    text-shadow: 20px 20px 5px rgba(255, 153, 204, 0.2117647059), -20px -20px 5px rgba(100, 165, 183, 0.2235294118);
+  }
+  8% {
+    text-shadow: 10px 25px 5px rgba(255, 153, 204, 0.2117647059), -10px -25px 5px rgba(100, 165, 183, 0.2235294118);
+  }
+  16% {
+    text-shadow: 0px 30px 5px rgba(255, 153, 204, 0.2117647059), 0px -30px 5px rgba(100, 165, 183, 0.2235294118);
+  }
+  24% {
+    text-shadow: -10px 25px 5px rgba(255, 153, 204, 0.2117647059), 10px -25px 5px rgba(100, 165, 183, 0.2235294118);
+  }
+  32% {
+    text-shadow: -20px 20px 5px rgba(255, 153, 204, 0.2117647059), 20px -20px 5px rgba(100, 165, 183, 0.2235294118);
+  }
+  40% {
+    text-shadow: -30px 0px 5px rgba(255, 153, 204, 0.2117647059), 30px 0px 5px rgba(100, 165, 183, 0.2235294118);
+  }
+  48% {
+    text-shadow: -20px -20px 5px rgba(255, 153, 204, 0.2117647059), 20px 20px 5px rgba(100, 165, 183, 0.2235294118);
+  }
+  56% {
+    text-shadow: -10px -25px 5px rgba(255, 153, 204, 0.2117647059), 10px 25px 5px rgba(100, 165, 183, 0.2235294118);
+  }
+  64% {
+    text-shadow: 0px -30px 5px rgba(255, 153, 204, 0.2117647059), 0px 30px 5px rgba(100, 165, 183, 0.2235294118);
+  }
+  72% {
+    text-shadow: 10px -25px 5px rgba(255, 153, 204, 0.2117647059), -10px 25px 5px rgba(100, 165, 183, 0.2235294118);
+  }
+  80% {
+    text-shadow: 20px -20px 5px rgba(255, 153, 204, 0.2117647059), -20px 20px 5px rgba(100, 165, 183, 0.2235294118);
+  }
+  88% {
+    text-shadow: 30px 0px 5px rgba(255, 153, 204, 0.2117647059), -30px 0px 5px rgba(100, 165, 183, 0.2235294118);
+  }
+  100% {
+    text-shadow: 20px 20px 5px rgba(255, 153, 204, 0.2117647059), -20px -20px 5px rgba(100, 165, 183, 0.2235294118);
+  }
+}
 @font-face {
   font-family: "Ikaros-regular";
   src: url(/fonts/Ikaros-Regular.otf);
@@ -22,106 +104,102 @@
   font-family: "Ikaros-light";
   src: url(/fonts/Ikaros-Light.otf);
 }
+@media screen and (max-width: 760px) {
+  nav {
+    flex-direction: column;
+  }
+  .buttons {
+    padding: 20px;
+  }
+  #welcome {
+    font-size: 20px;
+  }
+}
 body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  width: 99%;
-  background-image: linear-gradient(to top right, rgb(79, 83, 102) 30%, rgb(45, 50, 69) 30%);
+  background-image: linear-gradient(to top right, rgb(75, 79, 101) 15%, rgb(45, 50, 69) 35%, rgb(54, 58, 75) 65%, rgb(56, 59, 75) 90%);
   background-repeat: no-repeat;
+  background-size: cover;
   -webkit-animation: fadeEffect 4s;
   animation: fadeEffect 3s;
 }
 
-#welcome {
-  font-family: "Ikaros-regular";
-  font-size: 80px;
-  color: rgb(233, 233, 233);
-  text-align: center;
-  text-shadow: 110px 40px 5px rgba(255, 153, 204, 0.2117647059), -80px -40px 5px rgba(100, 165, 183, 0.2235294118);
-  transition: text-shadow 4s;
-  margin-bottom: 0px;
-}
-
-.main-content {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  height: 500px;
-}
-
 header {
   display: flex;
-  flex-direction: row;
+  flex-direction: row wrap;
   justify-content: space-between;
 }
 header nav {
   display: flex;
-  max-width: 45%;
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
-  border-radius: 10px;
-  background-color: rgb(79, 83, 102);
-  box-shadow: -1px 1px 10px rgb(0, 0, 0);
+  justify-content: space-between;
+  flex-wrap: wrap;
 }
 header nav a {
   display: flex;
   padding: 30px;
   font-family: "Ikaros-light";
   color: rgb(245, 240, 240);
-  font-size: 30px;
+  font-size: 3vw;
   text-shadow: -3px 3px 8px rgb(42, 41, 41);
 }
 header nav a:hover {
   padding: 30px;
   font-family: "Ikaros-light";
   color: rgb(181, 175, 175);
-  font-size: 30px;
 }
 header #picture {
   display: flex;
-  max-width: 400px;
   margin-left: 15px;
   margin-top: 5px;
 }
 header #picture img {
   width: auto;
-  max-width: 250px;
+  max-width: 15vw;
   height: auto;
-  max-height: 250px;
+  max-height: 15vw;
   border-radius: 50%;
+  box-shadow: -5px 5px 10px rgb(32, 32, 32);
+}
+header #picture img:hover {
   box-shadow: -5px 5px 20px rgb(32, 32, 32);
 }
 
-#titleme {
-  font-family: "Ikaros-regular";
-  font-size: 80px;
-  color: rgb(66, 65, 65);
-  text-align: center;
-  margin: auto;
-}
-
-.info {
-  font-family: "Ikaros-light";
-  font-size: 70px;
-  color: rgb(41, 40, 40);
-  text-align: center;
-  margin-bottom: 0px;
-  padding-top: 100px;
-}
-
-#who {
+section {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+}
+
+#welcome-section {
+  align-items: center;
+  margin: 80px 0px 80px 0px;
+}
+#welcome-section #welcome {
+  font-size: 80px;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  -webkit-animation: shadow-loop 10s linear infinite;
+          animation: shadow-loop 10s linear infinite;
+}
+#welcome-section h2 {
+  margin: 0px;
+}
+#welcome-section p {
+  margin: 0px;
+}
+
+#about-me {
+  margin-top: 30%;
+  margin-bottom: 30%;
+  margin-left: 5%;
+  margin-right: 5%;
+  border-radius: 10px 10px 10px 10px;
   background-color: rgba(245, 245, 245, 0.24);
-  border-radius: 50%;
-  margin-left: 100px;
-  max-width: 600px;
-  height: auto;
-  max-height: 600px;
-  margin-top: 100px;
-  margin-bottom: 100px;
   box-shadow: -3px 3px 10px rgb(33, 32, 32);
   text-shadow: -10px 10px 15px rgb(42, 41, 41);
 }
@@ -164,95 +242,40 @@ header #picture img {
 #cv {
   background-color: rgba(100, 165, 183, 0.2235294118);
   border-radius: 20px 200px 20px 200px;
-  margin-left: 350px;
-  margin-right: 350px;
   box-shadow: -3px 3px 20px rgb(33, 32, 32);
-  margin-top: 400px;
+  margin-top: 30%;
+  margin-bottom: 30%;
   position: relative;
   text-align: center;
-  padding-bottom: 30px;
-}
-
-#cv h2 {
-  font-family: "Ikaros-light";
-  font-size: 70px;
-  color: rgb(41, 40, 40);
-  margin-bottom: 0px;
-  padding-top: 30px;
-  text-shadow: -10px 10px 15px rgb(42, 41, 41);
 }
 
 #contact {
   background-color: rgba(255, 153, 204, 0.2078431373);
   border-radius: 20px 100px 100px 20px;
-  margin: auto;
-  margin-top: 400px;
   text-align: center;
-  margin-bottom: 100px;
+  margin-bottom: 30%;
+  margin-top: 30%;
   box-shadow: -3px 3px 20px rgb(33, 32, 32);
-  height: 500px;
 }
 
-#contact h2 {
-  font-family: "Ikaros-light";
-  font-size: 70px;
-  color: rgb(41, 40, 40);
-  margin-bottom: 0px;
-  margin-top: 2px;
-  text-shadow: -10px 10px 15px rgb(42, 41, 41);
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
-/*a {
-  padding: 30px;
-  font-family: "Ikaros-light";
-  color: rgb(245, 240, 240);
-  font-size: 30px;
-  text-shadow: -3px 3px 8px rgb(42, 41, 41);
-}
-
-a:hover {
-  padding: 30px;
-  font-family: "Ikaros-light";
-  color: rgb(181, 175, 175);
-  font-size: 30px;
-}*/
 p {
   font-family: "ikaros-light";
-  font-size: 30px;
+  font-size: 4vw;
   color: rgb(233, 233, 233);
   text-align: center;
-  margin-top: 0px;
   text-shadow: -3px 3px 8px rgb(42, 41, 41);
 }
 
-#first-text {
-  text-align: left;
-  margin: auto;
-  margin-top: 30px;
-  text-shadow: -10px 10px 12px rgb(42, 41, 41);
-}
-
-#second-text {
-  text-align: left;
-  margin: auto;
-  margin-top: 50px;
-  text-shadow: -10px 10px 12px rgb(42, 41, 41);
-}
-
-#third-text {
-  text-align: left;
-  margin: auto;
-  margin-top: 0px;
-  margin-bottom: 30px;
-  text-shadow: -10px 10px 12px rgb(42, 41, 41);
-}
-
-#fourth-text {
+h2 {
+  font-family: "Ikaros-regular";
+  color: rgb(233, 233, 233);
   text-align: center;
-  margin: auto;
-  padding-top: 20px;
-  margin-bottom: 0px;
-  text-shadow: -10px 10px 12px rgb(42, 41, 41);
 }
 
 #mail {
@@ -263,12 +286,4 @@ p {
 
 #form {
   border-radius: 10px;
-}
-
-#bottom {
-  text-align: right;
-}
-
-#whotop {
-  text-align: right;
 }/*# sourceMappingURL=style.css.map */

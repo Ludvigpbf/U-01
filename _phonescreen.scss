@@ -1,0 +1,140 @@
+@media screen and (max-width: 430px) {
+  body {
+    background-color: black;
+  }
+
+  section {
+    min-height: 85vh;
+    p {
+      font-family: "ikaros-light";
+      font-size: 0.6em;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+    }
+    h2 {
+      font-size: 2.5em;
+    }
+  }
+  .content {
+    padding-left: 15vw;
+    padding-right: 15vw;
+  }
+  header {
+    margin: auto;
+  }
+  #welcome-section {
+    .content {
+      animation: fadeEffect2 2s ease-in-out forwards;
+
+      #lpb {
+        font-size: 2.3em;
+      }
+      p {
+        font-size: 0.6em;
+      }
+    }
+  }
+  #about-me {
+    .content {
+      flex-direction: column-reverse;
+      justify-content: space-between;
+      min-width: 1vw;
+      #picture {
+        align-self: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      img {
+        border-radius: 50%;
+        max-width: 40vw;
+      }
+      h2 {
+        font-size: 2.5em;
+        text-align: start;
+      }
+      p {
+        font-size: 0.6em;
+      }
+    }
+  }
+  #contact {
+    .content {
+      h2 {
+        font-size: 2.2em;
+      }
+      h3 {
+        font-size: 0.5em;
+      }
+      #icons {
+        .icon-box {
+          div {
+            height: 4vh;
+            a {
+              img {
+                min-width: 0.1vw;
+                max-width: 7vw;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  // DROPDOWN MENU //
+  header {
+    border-radius: 0px 0px 5px 5px;
+  }
+  #phone {
+    display: flex;
+    border-radius: 20px;
+    #dropdown {
+      display: flex;
+      border-radius: 20px;
+      #hb-menu {
+        display: flex;
+        flex-direction: column;
+        width: 20vw;
+        hr {
+          width: 60px;
+        }
+      }
+
+      #dropdown-content {
+        display: none;
+      }
+      &:hover {
+        hr {
+          animation: hb-smashed 1s forwards;
+        }
+        #dropdown-content {
+          max-width: 50vw;
+          display: block;
+          position: absolute;
+          top: 100%;
+          right: -10%;
+          left: -10%;
+          background-color: black;
+          font-family: "Ikaros-light";
+          color: rgb(245, 240, 240);
+          text-decoration: none;
+          justify-content: center;
+          border-radius: 5px;
+        }
+        a {
+          font-size: 0.8em;
+        }
+      }
+    }
+  }
+  #desktop {
+    display: none;
+    #desktop-nav {
+      display: none;
+      .buttons {
+        display: none;
+      }
+    }
+  }
+}

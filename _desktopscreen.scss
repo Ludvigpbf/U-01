@@ -1,0 +1,83 @@
+@media screen and (min-width: 430px) {
+  header {
+    #desktop {
+      background-color: black;
+      height: fit-content;
+      justify-content: center;
+      flex-wrap: wrap;
+      position: sticky;
+      top: 0;
+
+      #desktop-nav {
+        display: flex;
+        justify-content: center;
+      }
+    }
+    #phone {
+      display: none;
+    }
+  }
+  .content {
+    padding-left: 15vw;
+    padding-right: 15vw;
+  }
+  section {
+    min-height: 85vh;
+    p {
+      font-family: "ikaros-light";
+      font-size: 0.9em;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+    h2 {
+      font-size: 7em;
+    }
+    article {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+    }
+  }
+
+  #welcome-section {
+    min-height: 80vh;
+    #lpb {
+      font-size: 5em;
+      animation: fadeEffect 2s ease-in-out forwards;
+    }
+  }
+}
+
+#about-me {
+  min-height: 80vh;
+  .content {
+    flex-direction: row;
+    justify-content: space-between;
+    min-width: 60vw;
+    article {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+    }
+    #picture {
+      align-self: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      margin-left: 10vw;
+    }
+    img {
+      border-radius: 50%;
+      max-width: 25vw;
+    }
+
+    h2 {
+      font-size: 7em;
+      text-align: start;
+    }
+    p {
+      font-size: $mainfontsizesmal;
+    }
+  }
+}

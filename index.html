@@ -5,115 +5,163 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
     <title>Ludvig PB Flyckt</title>
   </head>
   <body>
     <header>
-      <figure id="picture">
-        <a href="#about-me"><img
-          src="https://scontent-arn2-1.xx.fbcdn.net/v/t31.18172-8/17390603_10158487583755046_3157647083735978341_o.jpg?_nc_cat=111&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=0UftxWIHjSgAX-3VxKb&_nc_ht=scontent-arn2-1.xx&oh=00_AT-lkramglA-b1rn1YksumwqaR0_haKetTOa6GP6VmbI4Q&oe=63491FCC"
-          alt="Picture of me"
-        /></a>
-      </figure>
-
-<!-- The navbar -->     
-
-      <nav>
-        <a class="buttons" href="#about-me">Me</a>
-        <a class="buttons" href="#projects">Projects</a>
-        <a class="buttons" href="#cv">CV</a>
-        <a class="buttons" href="#contact">Contact</a>
+      <!-- Desktop navbar -->
+      <nav id="desktop">
+        <div id="desktop-nav">
+          <a class="buttons" href="#welcome-section">HOME</a>
+          <a class="buttons" href="#about-me">ME</a>
+          <a class="buttons" href="#projects">PROJECTS</a>
+          <a class="buttons" href="#resumé">CV</a>
+          <a class="buttons" href="#contact">CONTACT</a>
+        </div>
+      </nav>
+      <!-- Phone navbar -->
+      <nav id="phone">
+        <div id="dropdown">
+          <figure id="hb-menu">
+            <hr id="line1" />
+            <hr id="line2" />
+          </figure>
+          <div id="dropdown-content">
+            <a class="drpdwn" href="#about-me">Me</a>
+            <a class="drpdwn" href="#projects">Projects</a>
+            <a class="drpdwn" href="#resumé">CV</a>
+            <a class="drpdwn" href="#contact">Contact</a>
+            <a class="drpdwn" href="#welcome-section">Home</a>
+          </div>
+        </div>
       </nav>
     </header>
 
-<!-- Next section -->
-    
-    <section id="welcome-section">
-    <div class="content">
-      <h2 id="welcome">Ludvig PB Flyckt</h2>
-      <br />
-      <p>Fullstack Developer</p>
-    </div>
-  </section>
+    <!-- Welcome section -->
 
-<!-- Next section -->
+    <section id="welcome-section">
+      <div class="welcomebox">
+        <div class="content">
+          <h2 id="lpb">Ludvig PB Flyckt</h2>
+          <br />
+          <p>FULLSTACK DEVELOPER</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Info about me section -->
     <section id="about-me">
       <div class="content">
-        <h2>Who am I?</h2>
-        <p>
-          My name is Ludvig PB Flyckt and are a student at Chas Academy. <br />
-          Im studying to become a fullstack developer and will graduate in june
-          2024.
-        </p>
+        <article>
+          <h2>WHO AM I?</h2>
+          <p>
+            MY NAME IS LUDVIG PB FLYCKT AND I AM A STUDENT AT CHAS ACADAMY.
+            <br />
+            <br />
+            IM STUDYING TO BECOME A FULLSTACK WEB DEVELOPER AND WILL GRADUATE IN
+            JUNE 2024.
+          </p>
+        </article>
+        <figure id="picture">
+          <a href="https://www.instagram.com/ludvigflyckt/" target="_blank"
+            ><img
+              src="https://scontent-arn2-1.xx.fbcdn.net/v/t31.18172-8/17390603_10158487583755046_3157647083735978341_o.jpg?_nc_cat=111&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=0UftxWIHjSgAX-3VxKb&_nc_ht=scontent-arn2-1.xx&oh=00_AT-lkramglA-b1rn1YksumwqaR0_haKetTOa6GP6VmbI4Q&oe=63491FCC"
+              alt="Picture of me"
+          /></a>
+          <p>PUSH THE "DOT"</p>
+        </figure>
       </div>
-      <div id="whotop"><a href="#bilden">To the top!</a></div>
     </section>
 
-<!-- Next section -->
-  
-<section id="projects">
-  <div class="content">
-    <div id="circle"></div>
-      <ul id="listan">
-        <li>HTML</li>
-        <li>CSS</li>
-        <li>Markdown</li>
-        <li>Git</li>
-        <li>Github</li>
-      </ul>
-      <h2>Projects.</h2>
-      <p>
-        Mainly I have been working on mini-assignments. Right now Im learning
-        about the most commonly used programs and languages.
-      </p>
-  </div>
-  <div id="whotop"><a href="#bilden">To the top!</a></div>
-</section>
-    
-<!-- Next section -->
+    <!-- My projects section -->
 
-    <section id="cv">
+    <section id="projects">
       <div class="content">
-        <h2>Worklife experience.</h2>
+        <article>
+          <h2>PROJECTS.</h2>
+
+          <p>
+            ERROR: COULD NOT FIND OR LOAD MAIN CLASS... <br /><br />
+            ...YET! <br /><br />
+            FOLLOW ME ON
+            <a
+              href="https://github.com/Ludvigpbf?tab=repositories"
+              target="_blank"
+              >GITHUB</a
+            >
+            TO GET NOTIFIED ABOUT MY UPCOMING PROJECTS.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <!-- My resumé section -->
+
+    <section id="resumé">
+      <div class="content">
+        <a href="#open-resumé"><h2>MY RESUMÉ.</h2></a>
         <p>
           Before I started studying I worked as a chef for 13 years and for the
-          last 6 years as a headchef. I look forward to utilizing my experience of
-          working in a leading position in the profession as a full-stack
-          developer.
+          last 6 of those as a headchef.
+          <br /><br />
+          I'M LOOKING FORWARD TO UTILIZING MY EXEPRIENCE of working in a leading
+          position in the profession as a full-stack developer.
         </p>
       </div>
-      <div id="whotop"><a href="#bilden">To the top!</a></div>
+      <a href="#resumé" title="close" class="window-close"
+        ><div id="open-resumé" class="resumé-window">
+          <div>
+            <img src="/ludvig-cv-1.png" alt="my resumé" />
+          </div></div
+      ></a>
     </section>
-    
-<!-- Next section -->
+
+    <!-- Contact info section -->
 
     <section id="contact">
       <div class="content">
-        <p>Wanna get in touch?</p>
-        <form id="mail"
-          action="mailto:ludvig.flyckt@gmail.com"
-          method="post"
-          enctype="text/plain">
-        <div>
-          <label for="name">Name -</label>
-          <input id="form" type="text" name="name" id="name" />
-          <br/>
-          </label>
+        <h2>"HELLO..</h2>
+        <p>
+          ..IS IT ME YOU'RE LOOKING <span id="thesong">FOR</span>
+          <span id="forloop">(let i = 0; i < email.phone; i++)?"</span>
+        </p>
+        <div id="icons">
+          <div class="icon-box">
+            <div id="mail">
+              <a href="mailto: ludvig.flyckt@gmail.com">
+                <img src="/icons&img/email-5-64.png" alt="email logo"
+              /></a>
+            </div>
+            <p>ludvig.flyckt@gmail.com</p>
+          </div>
+          <div class="icon-box">
+            <div id="callme">
+              <a href="tel:+46707983878"
+                ><img
+                  id="phonecall"
+                  src="/icons&img/phone-64.png"
+                  alt="phonenumber"
+                />
+              </a>
+            </div>
+            <p>+46707079838</p>
+          </div>
+          <div class="icon-box">
+            <div id="lkdin">
+              <a
+                href="https://www.linkedin.com/in/ludvigflyckt/"
+                target="_blank"
+                ><img id="linkedin" src="/icons&img/linkedin-3-64.png"
+              /></a>
+            </div>
+            <p>/ludvigflyckt</p>
+          </div>
         </div>
-        <div>
-          <label for="email">Email -
-          <input id="form" type="text" name="email" id="email" />
-          </label>
-        </div>
-        <div>
-          <br />
-          <textarea id="form" name="message">Dear Ludvig..</textarea>
-          <input type="submit" value="Send">
-        </div>
-        </form>
-        <a href="tel:+46707983878">+46707983878</a>
-      </div>  
-      <div id="to-top"><a href="header">To the top!</a></div>
-    </section>  
+      </div>
+    </section>
   </body>
 </html>

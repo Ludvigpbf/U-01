@@ -1,62 +1,92 @@
 @import "_rules.scss";
-@import "_variables.scss";
+@import "_desktopscreen.scss";
+@import "_phonescreen.scss";
+$mainfontthin: "ikaros-light";
+$mainfontbold: "ikaros-regular";
+$mainfontsizesmal: 50px;
 
 body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background-image: linear-gradient(
-    to top right,
-    rgb(75, 79, 101) 15%,
-    rgb(45, 50, 69) 35%,
-    rgb(54, 58, 75) 65%,
-    rgb(56, 59, 75) 90%
-  );
   background-repeat: no-repeat;
   background-size: cover;
-  -webkit-animation: fadeEffect 4s;
-  animation: fadeEffect 3s;
+  margin: 0%;
+  scroll-behavior: smooth;
 }
 
 header {
-  display: flex;
   flex-direction: row wrap;
-  justify-content: space-between;
-  nav {
-    display: flex;
+  justify-content: center;
+  position: sticky;
+  top: 0;
+  background-color: black;
+  z-index: 9999;
+  #desktop {
+    background-color: black;
     height: fit-content;
-    justify-content: space-between;
+    justify-content: center;
     flex-wrap: wrap;
+    position: sticky;
+    top: 0;
+
+    #desktop-nav {
+      display: flex;
+      justify-content: center;
+    }
+
     a {
       display: flex;
       padding: 30px;
       font-family: "Ikaros-light";
       color: rgb(245, 240, 240);
-      font-size: 3vw;
-      text-shadow: -3px 3px 8px rgb(42, 41, 41);
+      font-size: 2vw;
+      text-decoration: none;
+      justify-content: center;
     }
-
     a:hover {
       padding: 30px;
       font-family: "Ikaros-light";
       color: rgb(181, 175, 175);
+      text-decoration: overline;
+    }
+    a:after {
+      padding: 30px;
+      font-family: "Ikaros-light";
+      color: rgb(181, 175, 175);
+      text-decoration: overline;
     }
   }
-
-  #picture {
+}
+#phone,
+#dropdown,
+#dropdown-content {
+  .drpdwn {
     display: flex;
-    margin-left: 15px;
-    margin-top: 5px;
-    img {
-      width: auto;
-      max-width: 15vw;
-      height: auto;
-      max-height: 15vw;
-      border-radius: 50%;
-      box-shadow: -5px 5px 10px rgb(32, 32, 32);
-    }
-    img:hover {
-      box-shadow: -5px 5px 20px rgb(32, 32, 32);
+    padding: 30px;
+    font-family: "Ikaros-light";
+    color: rgb(245, 240, 240);
+    font-size: 2vw;
+    text-decoration: none;
+    justify-content: center;
+    border-bottom: 1px solid white;
+    border-radius: 5px;
+  }
+  a:hover {
+    padding: 30px;
+    font-family: "Ikaros-light";
+    color: rgb(181, 175, 175);
+    text-decoration: overline;
+    #dropdown {
+      display: none;
+      margin: auto;
+
+      #dropdown:hover #dropdown-content {
+        display: inline;
+      }
+      #dropdown-content {
+        display: inline;
+      }
     }
   }
 }
@@ -71,89 +101,230 @@ section {
 
 #welcome-section {
   align-items: center;
-  margin: 80px 0px 80px 0px;
-  #welcome {
-    font-size: 80px;
+  background-image: linear-gradient((black) 60%, rgb(16, 16, 16) 90%);
+  .welcomebox {
+    display: flex;
+  }
+  .content #lpb {
     text-transform: uppercase;
     letter-spacing: 5px;
-    //text-shadow: -20px -20px 5px #ff99cc36, -80px -40px 5px #64a5b739;
-    // text-shadow: 110px 40px 5px #ff99cc36, -80px -40px 5px #64a5b739;
-    animation: shadow-loop 10s linear infinite;
   }
+
   h2 {
     margin: 0px;
   }
   p {
     margin: 0px;
+    font-family: "ikaros-light";
+    font-size: 1.5em;
+    color: rgb(233, 233, 233);
+    text-align: center;
+    text-shadow: -3px 3px 8px rgb(42, 41, 41);
   }
+}
+
+#menu:hover {
+  transform: rotateX(90deg);
 }
 
 #about-me {
-  margin-top: 30%;
-  margin-bottom: 30%;
-  margin-left: 5%;
-  margin-right: 5%;
-  border-radius: 10px 10px 10px 10px;
-  background-color: rgba(245, 245, 245, 0.24);
-  box-shadow: -3px 3px 10px rgb(33, 32, 32);
-  text-shadow: -10px 10px 15px rgb(42, 41, 41);
+  background-image: linear-gradient(
+    rgb(255, 255, 255) 75%,
+    rgb(228, 228, 228) 95%
+  );
+  align-items: center;
+
+  h2 {
+    background-color: black;
+    color: white;
+    margin: 0px;
+  }
+  p {
+    color: black;
+    font-family: "ikaros-regular";
+    font-size: $mainfontsizesmal;
+  }
+  #picture {
+    display: flex;
+    margin-left: 15px;
+    margin-top: 5px;
+
+    img {
+      width: auto;
+      max-width: 15vw;
+      height: auto;
+      max-height: 15vw;
+      border-radius: 50%;
+      box-shadow: 0px 0px 1px rgb(32, 32, 32);
+    }
+    img:hover {
+      box-shadow: 0px 0px 4px rgb(32, 32, 32);
+      animation: spin-in 1s ease-in-out forwards;
+      animation-direction: reverse;
+    }
+  }
 }
 
-.projects {
+#projects {
   display: flex;
-  flex-direction: row;
-  #projects {
-    display: flex;
-    background-color: rgba(245, 245, 245, 0.24);
-    border-radius: 50%;
+  flex-direction: column;
+  background-image: linear-gradient((black) 60%, rgb(16, 16, 16) 90%);
+  align-items: center;
 
-    height: 600px;
-    margin-top: 190px;
-    text-shadow: -10px 10px 12px rgb(42, 41, 41);
+  a {
+    text-decoration: none;
+    font-family: "ikaros-regular";
+    color: white;
+    font-style: italic;
+    font-weight: bold;
   }
-
-  #listan {
-    font-family: "ikaros-light";
-    font-size: 30px;
-    text-align: left;
-    color: rgb(174, 178, 192);
-    text-shadow: -10px 10px 12px rgb(42, 41, 41);
-    position: absolute;
-    margin-top: 300px;
-    margin-left: 300px;
-  }
-
-  #circle {
-    display: flex;
-    flex-direction: column;
-    background-color: #ff99cc35;
-    border-radius: 50%;
-    max-width: 600px;
-    height: auto;
-    max-width: 600px;
-    margin-top: 110px;
-    position: relative;
-    box-shadow: -3px 3px 10px rgb(33, 32, 32);
+  a:hover {
+    text-decoration: overline;
   }
 }
 
-#cv {
-  background-color: #64a5b739;
-  border-radius: 20px 200px 20px 200px;
-  box-shadow: -3px 3px 20px rgb(33, 32, 32);
-  margin-top: 30%;
-  margin-bottom: 30%;
-  position: relative;
-  text-align: center;
+#resumé {
+  background-image: linear-gradient(
+    rgb(255, 255, 255) 75%,
+    rgb(228, 228, 228) 95%
+  );
+  .resumé-window {
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.675);
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 99999;
+    visibility: hidden;
+    transition: 2s forwards;
+    &:target {
+      visibility: visible;
+      opacity: 1;
+    }
+    div {
+      display: flex;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      padding: 2em;
+      background: white;
+      justify-content: center;
+      align-items: center;
+
+      img {
+        max-width: 100%;
+        max-height: 90vh;
+      }
+    }
+    .window-close {
+      color: black;
+      font-family: "ikaros-light";
+      line-height: 50px;
+      font-size: 80%;
+      position: absolute;
+      right: 0;
+      text-align: center;
+      top: 0;
+      width: 70px;
+      text-decoration: none;
+      &:hover {
+        color: grey;
+      }
+    }
+  }
+  h2 {
+    color: black;
+  }
+  p {
+    color: black;
+    font-family: "ikaros-regular";
+    max-width: 40vw;
+  }
+
+  a {
+    text-decoration: none;
+    :hover {
+      text-decoration: overline;
+      text-decoration-color: black;
+    }
+  }
 }
 
 #contact {
-  background-color: #ff99cc35;
-  border-radius: 20px 100px 100px 20px;
+  background-image: linear-gradient((black) 60%, rgb(16, 16, 16) 90%);
   text-align: center;
-  margin-bottom: 30%;
-  margin-top: 30%;
-  box-shadow: -3px 3px 20px rgb(33, 32, 32);
+
+  a {
+    font-family: "ikaros-regular";
+    text-decoration: none;
+    color: white;
+    padding-top: 3vh;
+  }
+  a:hover {
+    text-decoration: overline;
+  }
+  #thesong {
+    color: blue;
+    text-transform: lowercase;
+  }
+  #forloop {
+    text-transform: lowercase;
+    color: white;
+  }
+  h2 {
+    margin: 0;
+  }
+  h3 {
+    font-family: "ikaros-regular";
+    color: white;
+    letter-spacing: 3px;
+    font-size: 0.9em;
+  }
+  a {
+    padding: 0;
+  }
+
+  #icons {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    min-width: 50vw;
+    margin-top: 5vh;
+    #mail {
+      display: flex;
+      justify-content: center;
+      transition: transform 0.3s ease-in-out;
+      &:hover {
+        transform: scale(1.2) translate(-1%, 1%);
+      }
+    }
+    #callme {
+      &:hover {
+        animation: vibrate 0.5s infinite;
+      }
+    }
+
+    #lkdin {
+      transition: transform 1s ease-in-out;
+      &:hover {
+        transform: rotate(180deg);
+      }
+    }
+
+    .icon-box {
+      min-height: 8vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      p {
+        font-size: 1vw;
+        align-self: bottom;
+      }
+    }
+  }
 }
 // DIVS //
 
@@ -161,17 +332,13 @@ section {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  animation: slide-up 1s forwards;
+  p {
+    color: white;
+  }
 }
 
 // TEXT //
-
-p {
-  font-family: "ikaros-light";
-  font-size: 4vw;
-  color: rgb(233, 233, 233);
-  text-align: center;
-  text-shadow: -3px 3px 8px rgb(42, 41, 41);
-}
 
 h2 {
   font-family: "Ikaros-regular";

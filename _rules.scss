@@ -1,5 +1,4 @@
 // KEY FRAMES //
-
 @-webkit-keyframes fadeEffect {
   from {
     opacity: 0;
@@ -15,9 +14,91 @@
   to {
     opacity: 1;
   }
+  0% {
+    text-shadow: 0px 0px 10px #ff99cc36, 0px 0px 10px #64a5b739;
+  }
+  100% {
+    text-shadow: 110px 40px 10px #ff99cc36, -80px -40px 10px #64a5b739;
+  }
+}
+@keyframes fadeEffect2 {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+  0% {
+    text-shadow: 0px 0px 10px #ff99cc36, 0px 0px 10px #64a5b739;
+  }
+  100% {
+    text-shadow: 55px 20px 5px #ff99cc36, -40px -20px 5px #64a5b739;
+  }
+}
+@keyframes hb-smashed {
+  0% {
+    width: 60px;
+  }
+  100% {
+    width: 0px;
+    opacity: 0;
+  }
+}
+@keyframes slide-up {
+  0% {
+    align-items: flex-end;
+    opacity: 0;
+  }
+  100% {
+    align-items: center;
+    opacity: 1;
+  }
 }
 
-@keyframes shadow-loop {
+@keyframes vibrate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(10deg);
+  }
+}
+@keyframes vibrate {
+  0% {
+    transform: translate(1px, 1px) rotate(0deg);
+  }
+  20% {
+    transform: translate(3px, 2px) rotate(0deg);
+  }
+  40% {
+    transform: translate(1px, -1px) rotate(1deg);
+  }
+
+  60% {
+    transform: translate(3px, 1px) rotate(-1deg);
+  }
+  80% {
+    transform: translate(-1px, -1px) rotate(1deg);
+  }
+  100% {
+    transform: translate(1px, -2px) rotate(-1deg);
+  }
+}
+
+// FONTS //
+
+@font-face {
+  font-family: "Ikaros-regular";
+  src: url(/fonts/Ikaros-Regular.otf);
+}
+@font-face {
+  font-family: "Ikaros-light";
+  src: url(/fonts/Ikaros-Light.otf);
+}
+
+/*@keyframes shadow-loop {
+   ROTATING SHADOWS 
+  
   0% {
     text-shadow: 20px 20px 5px #ff99cc36, -20px -20px 5px #64a5b739;
   }
@@ -58,28 +139,7 @@
     text-shadow: 20px 20px 5px #ff99cc36, -20px -20px 5px #64a5b739;
   }
 }
+*/
 
-// FONTS //
-
-@font-face {
-  font-family: "Ikaros-regular";
-  src: url(/fonts/Ikaros-Regular.otf);
-}
-@font-face {
-  font-family: "Ikaros-light";
-  src: url(/fonts/Ikaros-Light.otf);
-}
-
-// MEDIA //
-
-@media screen and (max-width: 760px) {
-  nav {
-    flex-direction: column;
-  }
-  .buttons {
-    padding: 20px;
-  }
-  #welcome {
-    font-size: 20px;
-  }
-}
+// VARIABLES //
+$mainfontsizesmal: 1em;

@@ -1,83 +1,131 @@
+$mainfontsizesmal: 0.9em;
+$mainfontsizebig: 4em;
 @media screen and (min-width: 430px) {
-  header {
-    #desktop {
-      background-color: black;
-      height: fit-content;
-      justify-content: center;
-      flex-wrap: wrap;
-      position: sticky;
-      top: 0;
-
-      #desktop-nav {
-        display: flex;
-        justify-content: center;
-      }
-    }
-    #phone {
-      display: none;
-    }
-  }
-  .content {
-    padding-left: 15vw;
-    padding-right: 15vw;
-  }
   section {
-    min-height: 85vh;
+    min-width: 430px;
     p {
-      font-family: "ikaros-light";
-      font-size: 0.9em;
+      font-family: "Ikaros-light";
+      font-size: $mainfontsizesmal;
       text-transform: uppercase;
       letter-spacing: 1px;
-    }
-    h2 {
-      font-size: 7em;
-    }
-    article {
-      display: flex;
-      justify-content: center;
-      flex-direction: column;
     }
   }
 
   #welcome-section {
     min-height: 80vh;
+    padding-top: 10vh;
     #lpb {
-      font-size: 5em;
+      font-size: $mainfontsizebig;
       animation: fadeEffect 2s ease-in-out forwards;
-    }
-  }
-}
-
-#about-me {
-  min-height: 80vh;
-  .content {
-    flex-direction: row;
-    justify-content: space-between;
-    min-width: 60vw;
-    article {
-      display: flex;
-      justify-content: center;
-      flex-direction: column;
-    }
-    #picture {
-      align-self: center;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-direction: column;
-      margin-left: 10vw;
-    }
-    img {
-      border-radius: 50%;
-      max-width: 25vw;
-    }
-
-    h2 {
-      font-size: 7em;
-      text-align: start;
+      margin-bottom: 4vh;
     }
     p {
-      font-size: $mainfontsizesmal;
+      align-self: center;
+      margin: 0px;
+      text-shadow: -3px 3px 8px rgb(42, 41, 41);
+    }
+  }
+
+  #about-me {
+    min-height: 80vh;
+    padding-top: 10vh;
+    .content {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      min-width: 60vw;
+      #article {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        #about {
+          display: flex;
+          flex-direction: column;
+          h2 {
+            font-size: $mainfontsizebig;
+            text-transform: uppercase;
+          }
+          p {
+            font-size: $mainfontsizesmal;
+          }
+        }
+        iframe {
+          align-self: center;
+          margin-bottom: 5vh;
+        }
+      }
+      .clickIG {
+        display: flex;
+        flex-flow: column;
+        justify-content: center;
+        margin-left: 10vw;
+        #picture {
+          align-self: center;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          flex-direction: column;
+        }
+        #ig-link {
+          border-radius: 50%;
+          max-width: 25vw;
+        }
+        #arrow {
+          display: flex;
+
+          flex-flow: column;
+          align-items: center;
+          #arrow1 {
+            width: 3vw;
+          }
+          p {
+            margin-top: 2vh;
+          }
+        }
+      }
+    }
+  }
+  #projects {
+    padding-top: 10vh;
+    .content {
+      #video-text {
+        h2 {
+          font-size: $mainfontsizebig;
+          text-transform: uppercase;
+          margin-bottom: 3vh;
+        }
+        p {
+          margin-bottom: 8vh;
+        }
+      }
+    }
+  }
+  #resume {
+    padding-top: 10vh;
+    .content {
+      flex-direction: row;
+    }
+    #skills {
+      max-width: 25vw;
+      span {
+        min-height: 3vh;
+      }
+    }
+    h2 {
+      text-transform: uppercase;
+      font-size: $mainfontsizebig;
+    }
+  }
+  #contact {
+    h2 {
+      text-transform: uppercase;
+      font-size: $mainfontsizebig;
+    }
+    #icons {
+      flex-direction: row;
+      p {
+        font-size: 0.5em;
+      }
     }
   }
 }

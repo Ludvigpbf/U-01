@@ -1,4 +1,3 @@
-@charset "UTF-8";
 @-webkit-keyframes fadeEffect {
   from {
     opacity: 0;
@@ -18,7 +17,7 @@
     text-shadow: 0px 0px 10px rgba(255, 153, 204, 0.2117647059), 0px 0px 10px rgba(100, 165, 183, 0.2235294118);
   }
   100% {
-    text-shadow: 110px 40px 10px rgba(255, 153, 204, 0.2117647059), -80px -40px 10px rgba(100, 165, 183, 0.2235294118);
+    text-shadow: 110px 40px 3px rgba(255, 153, 204, 0.2117647059), -80px -40px 3px rgba(100, 165, 183, 0.2235294118);
   }
 }
 @-webkit-keyframes fadeEffect2 {
@@ -32,7 +31,7 @@
     text-shadow: 0px 0px 10px rgba(255, 153, 204, 0.2117647059), 0px 0px 10px rgba(100, 165, 183, 0.2235294118);
   }
   100% {
-    text-shadow: 55px 20px 5px rgba(255, 153, 204, 0.2117647059), -40px -20px 5px rgba(100, 165, 183, 0.2235294118);
+    text-shadow: 45px 15px 3px rgba(255, 153, 204, 0.2117647059), -30px -15px 3px rgba(100, 165, 183, 0.2235294118);
   }
 }
 @keyframes fadeEffect2 {
@@ -46,61 +45,91 @@
     text-shadow: 0px 0px 10px rgba(255, 153, 204, 0.2117647059), 0px 0px 10px rgba(100, 165, 183, 0.2235294118);
   }
   100% {
-    text-shadow: 55px 20px 5px rgba(255, 153, 204, 0.2117647059), -40px -20px 5px rgba(100, 165, 183, 0.2235294118);
+    text-shadow: 45px 15px 3px rgba(255, 153, 204, 0.2117647059), -30px -15px 3px rgba(100, 165, 183, 0.2235294118);
   }
 }
 @-webkit-keyframes hb-smashed {
   0% {
-    width: 60px;
+    width: 12;
   }
   100% {
-    width: 0px;
-    opacity: 0;
+    width: 5vw;
+    opacity: 0.5;
   }
 }
 @keyframes hb-smashed {
   0% {
-    width: 60px;
+    width: 12;
   }
   100% {
-    width: 0px;
-    opacity: 0;
+    width: 5vw;
+    opacity: 0.5;
   }
 }
-@-webkit-keyframes slide-up {
-  0% {
-    align-items: flex-end;
-    opacity: 0;
+@-webkit-keyframes bounce {
+  70% {
+    transform: translateY(0%);
+  }
+  80% {
+    transform: translateY(-15%);
+  }
+  90% {
+    transform: translateY(0%);
+  }
+  95% {
+    transform: translateY(-7%);
+  }
+  97% {
+    transform: translateY(0%);
+  }
+  99% {
+    transform: translateY(-3%);
   }
   100% {
-    align-items: center;
-    opacity: 1;
+    transform: translateY(0);
   }
 }
-@keyframes slide-up {
-  0% {
-    align-items: flex-end;
-    opacity: 0;
+@keyframes bounce {
+  70% {
+    transform: translateY(0%);
+  }
+  80% {
+    transform: translateY(-15%);
+  }
+  90% {
+    transform: translateY(0%);
+  }
+  95% {
+    transform: translateY(-7%);
+  }
+  97% {
+    transform: translateY(0%);
+  }
+  99% {
+    transform: translateY(-3%);
   }
   100% {
-    align-items: center;
-    opacity: 1;
+    transform: translateY(0);
   }
 }
 @-webkit-keyframes vibrate {
-  from {
-    transform: rotate(0deg);
+  0% {
+    transform: translate(1px, 1px) rotate(0deg);
   }
-  to {
-    transform: rotate(10deg);
+  20% {
+    transform: translate(3px, 2px) rotate(0deg);
   }
-}
-@keyframes vibrate {
-  from {
-    transform: rotate(0deg);
+  40% {
+    transform: translate(1px, -1px) rotate(1deg);
   }
-  to {
-    transform: rotate(10deg);
+  60% {
+    transform: translate(3px, 1px) rotate(-1deg);
+  }
+  80% {
+    transform: translate(-1px, -1px) rotate(1deg);
+  }
+  100% {
+    transform: translate(1px, -2px) rotate(-1deg);
   }
 }
 @keyframes vibrate {
@@ -131,147 +160,137 @@
   font-family: "Ikaros-light";
   src: url(/fonts/Ikaros-Light.otf);
 }
-/*@keyframes shadow-loop {
-   ROTATING SHADOWS 
-
-  0% {
-    text-shadow: 20px 20px 5px #ff99cc36, -20px -20px 5px #64a5b739;
-  }
-  8% {
-    text-shadow: 10px 25px 5px #ff99cc36, -10px -25px 5px #64a5b739;
-  }
-  16% {
-    text-shadow: 0px 30px 5px #ff99cc36, -0px -30px 5px #64a5b739;
-  }
-  24% {
-    text-shadow: -10px 25px 5px #ff99cc36, 10px -25px 5px #64a5b739;
-  }
-  32% {
-    text-shadow: -20px 20px 5px #ff99cc36, 20px -20px 5px #64a5b739;
-  }
-  40% {
-    text-shadow: -30px 0px 5px #ff99cc36, 30px -0px 5px #64a5b739;
-  }
-  48% {
-    text-shadow: -20px -20px 5px #ff99cc36, 20px 20px 5px #64a5b739;
-  }
-  56% {
-    text-shadow: -10px -25px 5px #ff99cc36, 10px 25px 5px #64a5b739;
-  }
-  64% {
-    text-shadow: -0px -30px 5px #ff99cc36, 0px 30px 5px #64a5b739;
-  }
-  72% {
-    text-shadow: 10px -25px 5px #ff99cc36, -10px 25px 5px #64a5b739;
-  }
-  80% {
-    text-shadow: 20px -20px 5px #ff99cc36, -20px 20px 5px #64a5b739;
-  }
-  88% {
-    text-shadow: 30px 0px 5px #ff99cc36, -30px 0px 5px #64a5b739;
-  }
-  100% {
-    text-shadow: 20px 20px 5px #ff99cc36, -20px -20px 5px #64a5b739;
-  }
-}
-*/
 @media screen and (min-width: 430px) {
-  header #desktop {
-    background-color: black;
-    height: -webkit-fit-content;
-    height: -moz-fit-content;
-    height: fit-content;
-    justify-content: center;
-    flex-wrap: wrap;
-    position: -webkit-sticky;
-    position: sticky;
-    top: 0;
-  }
-  header #desktop #desktop-nav {
-    display: flex;
-    justify-content: center;
-  }
-  header #phone {
-    display: none;
-  }
-  .content {
-    padding-left: 15vw;
-    padding-right: 15vw;
-  }
   section {
-    min-height: 85vh;
+    min-width: 430px;
   }
   section p {
-    font-family: "ikaros-light";
+    font-family: "Ikaros-light";
     font-size: 0.9em;
     text-transform: uppercase;
     letter-spacing: 1px;
   }
-  section h2 {
-    font-size: 7em;
+  #welcome-section {
+    min-height: 80vh;
+    padding-top: 10vh;
   }
-  section article {
+  #welcome-section #lpb {
+    font-size: 4em;
+    -webkit-animation: fadeEffect 2s ease-in-out forwards;
+            animation: fadeEffect 2s ease-in-out forwards;
+    margin-bottom: 4vh;
+  }
+  #welcome-section p {
+    align-self: center;
+    margin: 0px;
+    text-shadow: -3px 3px 8px rgb(42, 41, 41);
+  }
+  #about-me {
+    min-height: 80vh;
+    padding-top: 10vh;
+  }
+  #about-me .content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    min-width: 60vw;
+  }
+  #about-me .content #article {
     display: flex;
     justify-content: center;
     flex-direction: column;
   }
-  #welcome-section {
-    min-height: 80vh;
+  #about-me .content #article #about {
+    display: flex;
+    flex-direction: column;
   }
-  #welcome-section #lpb {
-    font-size: 5em;
-    -webkit-animation: fadeEffect 2s ease-in-out forwards;
-            animation: fadeEffect 2s ease-in-out forwards;
+  #about-me .content #article #about h2 {
+    font-size: 4em;
+    text-transform: uppercase;
+  }
+  #about-me .content #article #about p {
+    font-size: 0.9em;
+  }
+  #about-me .content #article iframe {
+    align-self: center;
+    margin-bottom: 5vh;
+  }
+  #about-me .content .clickIG {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    margin-left: 10vw;
+  }
+  #about-me .content .clickIG #picture {
+    align-self: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  #about-me .content .clickIG #ig-link {
+    border-radius: 50%;
+    max-width: 25vw;
+  }
+  #about-me .content .clickIG #arrow {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+  }
+  #about-me .content .clickIG #arrow #arrow1 {
+    width: 3vw;
+  }
+  #about-me .content .clickIG #arrow p {
+    margin-top: 2vh;
+  }
+  #projects {
+    padding-top: 10vh;
+  }
+  #projects .content #video-text h2 {
+    font-size: 4em;
+    text-transform: uppercase;
+    margin-bottom: 3vh;
+  }
+  #projects .content #video-text p {
+    margin-bottom: 8vh;
+  }
+  #resume {
+    padding-top: 10vh;
+  }
+  #resume .content {
+    flex-direction: row;
+  }
+  #resume #skills {
+    max-width: 25vw;
+  }
+  #resume #skills span {
+    min-height: 3vh;
+  }
+  #resume h2 {
+    text-transform: uppercase;
+    font-size: 4em;
+  }
+  #contact h2 {
+    text-transform: uppercase;
+    font-size: 4em;
+  }
+  #contact #icons {
+    flex-direction: row;
+  }
+  #contact #icons p {
+    font-size: 0.5em;
   }
 }
-#about-me {
-  min-height: 80vh;
-}
-#about-me .content {
-  flex-direction: row;
-  justify-content: space-between;
-  min-width: 60vw;
-}
-#about-me .content article {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-}
-#about-me .content #picture {
-  align-self: center;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  margin-left: 10vw;
-}
-#about-me .content img {
-  border-radius: 50%;
-  max-width: 25vw;
-}
-#about-me .content h2 {
-  font-size: 7em;
-  text-align: start;
-}
-#about-me .content p {
-  font-size: 1em;
-}
-
 @media screen and (max-width: 430px) {
-  body {
-    background-color: black;
-  }
   section {
-    min-height: 85vh;
+    min-width: 310px;
+    text-transform: uppercase;
   }
   section p {
-    font-family: "ikaros-light";
-    font-size: 0.6em;
+    font-family: "Ikaros-light";
+    font-size: 0.5em;
     text-transform: uppercase;
-    letter-spacing: 1.5px;
-  }
-  section h2 {
-    font-size: 2.5em;
+    letter-spacing: 1px;
   }
   .content {
     padding-left: 15vw;
@@ -285,38 +304,107 @@
             animation: fadeEffect2 2s ease-in-out forwards;
   }
   #welcome-section .content #lpb {
-    font-size: 2.3em;
+    font-size: 1.1em;
+    -webkit-animation: fadeEffect2 2s ease-in-out forwards;
+            animation: fadeEffect2 2s ease-in-out forwards;
   }
   #welcome-section .content p {
-    font-size: 0.6em;
+    align-self: center;
+    margin: 0px;
+    text-shadow: -3px 3px 8px rgb(42, 41, 41);
   }
   #about-me .content {
     flex-direction: column-reverse;
     justify-content: space-between;
-    min-width: 1vw;
+    min-height: 30vh;
+    padding-top: 5vh;
+    padding-bottom: 5vh;
   }
-  #about-me .content #picture {
+  #about-me .content #article {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+  }
+  #about-me .content #article p {
+    font-size: 0.5em;
+    margin: 0;
+  }
+  #about-me .content #article #about h2 {
+    font-size: 1.1em;
+  }
+  #about-me .content #article #about p {
+    font-size: 0.5em;
+  }
+  #about-me .content #article iframe {
+    margin-top: 3vh;
+    max-width: 64vw;
+    order: 1;
+  }
+  #about-me .content .clickIG #picture {
     align-self: center;
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
+    margin-bottom: 1vh;
   }
-  #about-me .content img {
+  #about-me .content .clickIG #picture p {
+    font-size: 0.5em;
+    text-decoration: underline;
+    margin: 0;
+  }
+  #about-me .content .clickIG #ig-link {
     border-radius: 50%;
     max-width: 40vw;
   }
-  #about-me .content h2 {
-    font-size: 2.5em;
-    text-align: start;
+  #about-me .content .clickIG #arrow {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
   }
-  #about-me .content p {
-    font-size: 0.6em;
+  #about-me .content .clickIG #arrow #arrow1 {
+    width: 3vw;
+    margin-bottom: 0.5vh;
   }
-  #contact .content h2 {
-    font-size: 2.2em;
-  }
-  #contact .content h3 {
+  #about-me .content .clickIG #arrow p {
     font-size: 0.5em;
+    margin: 0;
+  }
+  #projects .content {
+    max-width: 50vw;
+  }
+  #projects h2 {
+    font-size: 1.1em;
+  }
+  #resume .content {
+    flex-flow: column-reverse;
+  }
+  #resume .content #arrow2 {
+    -webkit-animation: bounce 1.5s ease infinite;
+            animation: bounce 1.5s ease infinite;
+  }
+  #resume .content #skills {
+    align-self: center;
+    font-size: 0.5em;
+  }
+  #resume .content #skills span {
+    min-height: 2vh;
+    min-width: 4vw;
+  }
+  #resume .content h2 {
+    font-size: 1.1em;
+  }
+  #resume .content p {
+    max-width: 64vw;
+  }
+  #contact .content a h2 {
+    font-size: 1.1em;
+  }
+  #contact .content p {
+    font-size: 0.5em;
+  }
+  #contact .content #icons {
+    flex-direction: column;
   }
   #contact .content #icons .icon-box div {
     height: 4vh;
@@ -324,6 +412,9 @@
   #contact .content #icons .icon-box div a img {
     min-width: 0.1vw;
     max-width: 7vw;
+  }
+  #contact .content #icons .icon-box div p {
+    font-size: 0.5em;
   }
   header {
     border-radius: 0px 0px 5px 5px;
@@ -342,7 +433,7 @@
     width: 20vw;
   }
   #phone #dropdown #hb-menu hr {
-    width: 60px;
+    width: 12vw;
   }
   #phone #dropdown #dropdown-content {
     display: none;
@@ -352,7 +443,7 @@
             animation: hb-smashed 1s forwards;
   }
   #phone #dropdown:hover #dropdown-content {
-    max-width: 50vw;
+    max-width: 54vw;
     display: block;
     position: absolute;
     top: 100%;
@@ -366,7 +457,8 @@
     border-radius: 5px;
   }
   #phone #dropdown:hover a {
-    font-size: 0.8em;
+    font-size: 0.5em;
+    text-transform: uppercase;
   }
   #desktop {
     display: none;
@@ -378,14 +470,29 @@
     display: none;
   }
 }
+@font-face {
+  font-family: "Ikaros-regular";
+  src: url(/fonts/Ikaros-Regular.otf);
+}
+@font-face {
+  font-family: "Ikaros-light";
+  src: url(/fonts/Ikaros-Light.otf);
+}
 body {
   display: flex;
   flex-direction: column;
   justify-content: center;
   background-repeat: no-repeat;
+  background-color: black;
   background-size: cover;
   margin: 0%;
   scroll-behavior: smooth;
+}
+body section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 85vh;
 }
 
 header {
@@ -395,7 +502,12 @@ header {
   position: sticky;
   top: 0;
   background-color: black;
-  z-index: 9999;
+  z-index: 1;
+}
+@media screen and (min-width: 430px) {
+  header #phone {
+    display: none;
+  }
 }
 header #desktop {
   background-color: black;
@@ -412,70 +524,60 @@ header #desktop #desktop-nav {
   display: flex;
   justify-content: center;
 }
-header #desktop a {
+header #desktop #desktop-nav a {
   display: flex;
   padding: 30px;
   font-family: "Ikaros-light";
   color: rgb(245, 240, 240);
-  font-size: 2vw;
+  font-size: 0.9em;
   text-decoration: none;
   justify-content: center;
+  text-transform: uppercase;
 }
-header #desktop a:hover {
+header #desktop #desktop-nav a:hover {
   padding: 30px;
   font-family: "Ikaros-light";
   color: rgb(181, 175, 175);
   text-decoration: overline;
 }
-header #desktop a:after {
+header #desktop #desktop-nav a:active {
+  padding: 30px;
+  font-family: "Ikaros-light";
+  color: rgb(245, 240, 240);
+  text-decoration: underline;
+}
+header #desktop #desktop-nav a:focus {
   padding: 30px;
   font-family: "Ikaros-light";
   color: rgb(181, 175, 175);
   text-decoration: overline;
 }
-
-#phone .drpdwn,
-#dropdown .drpdwn,
-#dropdown-content .drpdwn {
+header #phone #dropdown #dropdown-content .drpdwn {
   display: flex;
   padding: 30px;
   font-family: "Ikaros-light";
   color: rgb(245, 240, 240);
-  font-size: 2vw;
+  font-size: 0.9em;
   text-decoration: none;
   justify-content: center;
   border-bottom: 1px solid white;
   border-radius: 5px;
 }
-#phone a:hover,
-#dropdown a:hover,
-#dropdown-content a:hover {
+header #phone #dropdown #dropdown-content a:hover {
   padding: 30px;
   font-family: "Ikaros-light";
   color: rgb(181, 175, 175);
   text-decoration: overline;
 }
-#phone a:hover #dropdown,
-#dropdown a:hover #dropdown,
-#dropdown-content a:hover #dropdown {
+header #phone #dropdown #dropdown-content a:hover #dropdown {
   display: none;
   margin: auto;
 }
-#phone a:hover #dropdown #dropdown:hover #dropdown-content,
-#dropdown a:hover #dropdown #dropdown:hover #dropdown-content,
-#dropdown-content a:hover #dropdown #dropdown:hover #dropdown-content {
+header #phone #dropdown #dropdown-content a:hover #dropdown #dropdown:hover #dropdown-content {
   display: inline;
 }
-#phone a:hover #dropdown #dropdown-content,
-#dropdown a:hover #dropdown #dropdown-content,
-#dropdown-content a:hover #dropdown #dropdown-content {
+header #phone #dropdown #dropdown-content a:hover #dropdown #dropdown-content {
   display: inline;
-}
-
-section {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
 }
 
 #welcome-section {
@@ -485,96 +587,232 @@ section {
 #welcome-section .welcomebox {
   display: flex;
 }
-#welcome-section .content #lpb {
+#welcome-section .welcomebox .content #lpb {
   text-transform: uppercase;
   letter-spacing: 5px;
-}
-#welcome-section h2 {
-  margin: 0px;
-}
-#welcome-section p {
-  margin: 0px;
-  font-family: "ikaros-light";
-  font-size: 1.5em;
-  color: rgb(233, 233, 233);
-  text-align: center;
-  text-shadow: -3px 3px 8px rgb(42, 41, 41);
-}
-
-#menu:hover {
-  transform: rotateX(90deg);
+  color: white;
+  /* &:hover {
+    animation: slideAway 1s ease-in-out forwards;
+  } */
 }
 
 #about-me {
   background-image: linear-gradient(rgb(255, 255, 255) 75%, rgb(228, 228, 228) 95%);
-  align-items: center;
 }
-#about-me h2 {
+#about-me .content #about {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+#about-me .content #about h2 {
   background-color: black;
   color: white;
-  margin: 0px;
+  margin-bottom: 3vh;
+  border-radius: 10px;
+  min-width: 40vw;
+  text-transform: uppercase;
 }
-#about-me p {
+#about-me .content p {
   color: black;
-  font-family: "ikaros-regular";
-  font-size: 50px;
+  font-family: "Ikaros-regular";
+  font-size: 0.9em;
+  margin-top: 4vh;
+  text-align: center;
 }
-#about-me #picture {
+#about-me .content #picture {
   display: flex;
-  margin-left: 15px;
   margin-top: 5px;
 }
-#about-me #picture img {
+#about-me .content #picture img {
   width: auto;
   max-width: 15vw;
   height: auto;
   max-height: 15vw;
   border-radius: 50%;
-  box-shadow: 0px 0px 1px rgb(32, 32, 32);
+  box-shadow: 0px 1px 2px rgb(32, 32, 32);
+  transition: 0.3s ease-in-out;
 }
-#about-me #picture img:hover {
-  box-shadow: 0px 0px 4px rgb(32, 32, 32);
-  -webkit-animation: spin-in 1s ease-in-out forwards;
-          animation: spin-in 1s ease-in-out forwards;
-  animation-direction: reverse;
+#about-me .content #picture img:hover {
+  box-shadow: 0px 5px 10px rgb(32, 32, 32);
+  transform: scale(1.1) translate(-1%, 1%);
+}
+#about-me .content #arrow1 {
+  -webkit-animation: bounce 1.5s ease infinite;
+          animation: bounce 1.5s ease infinite;
 }
 
 #projects {
   display: flex;
   flex-direction: column;
   background-image: linear-gradient(black 60%, rgb(16, 16, 16) 90%);
+  background-image: url(/icons&img/pexels-fauxels-3183150.jpg);
+  background-size: cover;
   align-items: center;
 }
-#projects a {
-  text-decoration: none;
+#projects .content {
+  background-color: rgba(255, 255, 255, 0.867);
+  border-radius: 10em;
+}
+#projects .content #video-text {
+  text-align: center;
+  max-height: 45vh;
+  padding: 10px;
+}
+#projects .content #video-text h2 {
+  color: black;
+}
+#projects .content #video-text p {
+  color: black;
   font-family: "ikaros-regular";
-  color: white;
+}
+#projects .content #video-text a {
+  text-decoration: none;
+  font-family: "Ikaros-regular";
+  color: #f34f29;
   font-style: italic;
   font-weight: bold;
+  font-size: 1.2em;
+  transition: transform 0.3s ease-in-out;
 }
-#projects a:hover {
+#projects .content #video-text a:hover {
+  color: #781904;
+  text-decoration: overline;
+  transition: 0.3s ease-in-out;
+}
+#projects .content #video-text a:active {
+  color: #f34f29;
+  text-decoration: underline;
+}
+#projects .content #video-text a:focus {
+  color: #781904;
   text-decoration: overline;
 }
 
-#resumé {
-  background-image: linear-gradient(rgb(255, 255, 255) 75%, rgb(228, 228, 228) 95%);
+#resume {
+  background-image: linear-gradient(rgb(39, 39, 39) 80%, rgb(0, 0, 0) 100%);
 }
-#resumé .resumé-window {
+#resume .content {
+  display: flex;
+  justify-content: space-between;
+}
+#resume .content #skills {
+  display: flex;
+  align-items: center;
+  border-right: 1px solid white;
+}
+#resume .content #skills table {
+  display: flex;
+  font-family: "ikaros-light";
+  text-align: left;
+}
+#resume .content #skills table tbody tr {
+  padding: 2vh;
+  display: flex;
+  flex-flow: column;
+  max-width: 55vw;
+}
+#resume .content #skills table tbody tr th {
+  display: flex;
+  align-items: center;
+  color: white;
+  text-transform: uppercase;
+}
+#resume .content #skills table tbody tr th img {
+  padding-right: 1vw;
+  width: 10%;
+  height: 10%;
+}
+#resume .content #skills table tbody tr .progress-bar {
+  max-width: 75vw;
+  height: 1vh;
+  margin-top: 2vh;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+}
+#resume .content #skills table tbody tr .progress-bar div {
+  height: 1.3vh;
+  border-radius: 15px;
+  width: 0%;
+  display: flex;
+  align-items: center;
+  justify-content: right;
+  padding-left: 0%;
+}
+#resume .content #skills table tbody tr .progress-bar div span {
+  display: flex;
+  border: 2px solid;
+  font-family: "ikaros-regular";
+  align-items: center;
+  justify-content: center;
+  font-size: 80%;
+  border-radius: 50%;
+  background-color: rgb(39, 39, 39);
+  color: white;
+  padding: 0.2em;
+}
+#resume .content #skills table tbody tr .progress-bar div.html {
+  background-color: #e34c26;
+  width: 65%;
+}
+#resume .content #skills table tbody tr .progress-bar div.html span {
+  border-color: #e34c26;
+}
+#resume .content #skills table tbody tr .progress-bar div.css {
+  background-color: #2965f1;
+  width: 70%;
+}
+#resume .content #skills table tbody tr .progress-bar div.css span {
+  border-color: #2965f1;
+}
+#resume .content #skills table tbody tr .progress-bar div.javascript {
+  background-color: #ffc300;
+  width: 30%;
+}
+#resume .content #skills table tbody tr .progress-bar div.javascript span {
+  border-color: #ffc300;
+}
+#resume .content #skills table tbody tr .progress-bar div.git {
+  background-color: #f34f29;
+  width: 45%;
+}
+#resume .content #skills table tbody tr .progress-bar div.git span {
+  border-color: #f34f29;
+}
+#resume .arrow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column;
+}
+#resume .arrow #arrow2 {
+  -webkit-animation: bounce 1.5s ease infinite;
+          animation: bounce 1.5s ease infinite;
+}
+#resume .arrow img {
+  background-color: white;
+  border-radius: 50%;
+  color: white;
+  width: 7%;
+  height: 7%;
+}
+#resume .resume-window {
   position: fixed;
   background-color: rgba(0, 0, 0, 0.675);
   top: 0;
   right: 0;
   bottom: 0;
   left: 0;
-  z-index: 99999;
+  z-index: 1;
   visibility: hidden;
   transition: 2s forwards;
 }
-#resumé .resumé-window:target {
+#resume .resume-window:target {
   visibility: visible;
   opacity: 1;
 }
-#resumé .resumé-window div {
+#resume .resume-window div {
   display: flex;
   position: absolute;
   top: 50%;
@@ -585,15 +823,15 @@ section {
   justify-content: center;
   align-items: center;
 }
-#resumé .resumé-window div img {
+#resume .resume-window div img {
   max-width: 100%;
   max-height: 90vh;
 }
-#resumé .resumé-window .window-close {
+#resume .resume-window .window-close {
   color: black;
-  font-family: "ikaros-light";
+  font-family: "Ikaros-light";
   line-height: 50px;
-  font-size: 80%;
+  font-size: 0.9em;
   position: absolute;
   right: 0;
   text-align: center;
@@ -601,119 +839,115 @@ section {
   width: 70px;
   text-decoration: none;
 }
-#resumé .resumé-window .window-close:hover {
+#resume .resume-window .window-close:hover {
   color: grey;
 }
-#resumé h2 {
-  color: black;
+#resume h2 {
+  color: white;
+  margin: 1vh;
+  transition: 0.3s ease-in-out;
 }
-#resumé p {
-  color: black;
-  font-family: "ikaros-regular";
+#resume h2:hover {
+  transform: scale(1.1) translate(0%, 1%);
+}
+#resume h2:focus {
+  transform: scale(1.1) translate(0%, 1%);
+}
+#resume p {
+  color: white;
+  font-family: "Ikaros-light";
   max-width: 40vw;
+  align-self: center;
+  margin-left: 3vw;
+  margin-right: 3vw;
+  text-align: center;
 }
-#resumé a {
+#resume a {
   text-decoration: none;
+  text-align: center;
 }
-#resumé a :hover {
+#resume a :hover {
   text-decoration: overline;
-  -webkit-text-decoration-color: black;
-          text-decoration-color: black;
+  -webkit-text-decoration-color: white;
+          text-decoration-color: white;
 }
 
 #contact {
   background-image: linear-gradient(black 60%, rgb(16, 16, 16) 90%);
   text-align: center;
 }
-#contact a {
-  font-family: "ikaros-regular";
-  text-decoration: none;
-  color: white;
-  padding-top: 3vh;
+#contact .content p {
+  align-self: bottom;
 }
-#contact a:hover {
-  text-decoration: overline;
-}
-#contact #thesong {
-  color: blue;
-  text-transform: lowercase;
-}
-#contact #forloop {
-  text-transform: lowercase;
-  color: white;
-}
-#contact h2 {
+#contact .content h2 {
   margin: 0;
-}
-#contact h3 {
-  font-family: "ikaros-regular";
   color: white;
-  letter-spacing: 3px;
-  font-size: 0.9em;
 }
-#contact a {
-  padding: 0;
+#contact .content #green-for {
+  color: rgb(34, 255, 0);
+  text-transform: lowercase;
 }
-#contact #icons {
+#contact .content #for-statement {
+  text-transform: lowercase;
+  color: white;
+}
+#contact .content #icons {
   align-items: center;
   display: flex;
-  flex-direction: row;
   justify-content: space-between;
-  min-width: 50vw;
-  margin-top: 5vh;
+  max-width: 70vw;
+  min-width: 30vw;
+  padding-top: 5vh;
+  margin: auto;
 }
-#contact #icons #mail {
+#contact .content #icons #mail {
   display: flex;
   justify-content: center;
   transition: transform 0.3s ease-in-out;
 }
-#contact #icons #mail:hover {
+#contact .content #icons #mail img {
+  max-block-size: 2em;
+}
+#contact .content #icons #mail:hover {
   transform: scale(1.2) translate(-1%, 1%);
 }
-#contact #icons #callme:hover {
+#contact .content #icons #callme img {
+  max-block-size: 2em;
+}
+#contact .content #icons #callme:hover {
   -webkit-animation: vibrate 0.5s infinite;
           animation: vibrate 0.5s infinite;
 }
-#contact #icons #lkdin {
+#contact .content #icons #lkdin {
   transition: transform 1s ease-in-out;
 }
-#contact #icons #lkdin:hover {
+#contact .content #icons #lkdin img {
+  max-block-size: 2em;
+}
+#contact .content #icons #lkdin:hover {
   transform: rotate(180deg);
 }
-#contact #icons .icon-box {
+#contact .content #icons .icon-box {
   min-height: 8vh;
   display: flex;
   flex-direction: column;
-  justify-content: center;
 }
-#contact #icons .icon-box p {
-  font-size: 1vw;
+#contact .content #icons .icon-box p {
   align-self: bottom;
 }
 
-.content {
+section .content {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  -webkit-animation: slide-up 1s forwards;
-          animation: slide-up 1s forwards;
+  padding-left: 15vw;
+  padding-right: 15vw;
 }
-.content p {
+section .content p {
   color: white;
 }
 
 h2 {
   font-family: "Ikaros-regular";
-  color: rgb(233, 233, 233);
   text-align: center;
-}
-
-#mail {
-  font-size: 20px;
-  color: rgb(233, 233, 233);
-  font-family: "ikaros-light";
-}
-
-#form {
-  border-radius: 10px;
 }/*# sourceMappingURL=style.css.map */

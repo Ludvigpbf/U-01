@@ -1,18 +1,33 @@
 @import "_rules.scss";
 @import "_desktopscreen.scss";
 @import "_phonescreen.scss";
-$mainfontthin: "ikaros-light";
-$mainfontbold: "ikaros-regular";
-$mainfontsizesmal: 50px;
+@font-face {
+  font-family: "Ikaros-regular";
+  src: url(/fonts/Ikaros-Regular.otf);
+}
+@font-face {
+  font-family: "Ikaros-light";
+  src: url(/fonts/Ikaros-Light.otf);
+}
+$mainfontsizesmal: 0.9em;
+$mainfontsizebig: 4em;
 
 body {
   display: flex;
   flex-direction: column;
   justify-content: center;
   background-repeat: no-repeat;
+  background-color: black;
   background-size: cover;
   margin: 0%;
   scroll-behavior: smooth;
+
+  section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 85vh;
+  }
 }
 
 header {
@@ -21,7 +36,12 @@ header {
   position: sticky;
   top: 0;
   background-color: black;
-  z-index: 9999;
+  z-index: 1;
+  #phone {
+    @media screen and (min-width: 430px) {
+      display: none;
+    }
+  }
   #desktop {
     background-color: black;
     height: fit-content;
@@ -33,98 +53,91 @@ header {
     #desktop-nav {
       display: flex;
       justify-content: center;
-    }
 
-    a {
-      display: flex;
-      padding: 30px;
-      font-family: "Ikaros-light";
-      color: rgb(245, 240, 240);
-      font-size: 2vw;
-      text-decoration: none;
-      justify-content: center;
-    }
-    a:hover {
-      padding: 30px;
-      font-family: "Ikaros-light";
-      color: rgb(181, 175, 175);
-      text-decoration: overline;
-    }
-    a:after {
-      padding: 30px;
-      font-family: "Ikaros-light";
-      color: rgb(181, 175, 175);
-      text-decoration: overline;
+      a {
+        display: flex;
+        padding: 30px;
+        font-family: "Ikaros-light";
+        color: rgb(245, 240, 240);
+        font-size: $mainfontsizesmal;
+        text-decoration: none;
+        justify-content: center;
+        text-transform: uppercase;
+
+        &:hover {
+          padding: 30px;
+          font-family: "Ikaros-light";
+          color: rgb(181, 175, 175);
+          text-decoration: overline;
+        }
+        &:active {
+          padding: 30px;
+          font-family: "Ikaros-light";
+          color: rgb(245, 240, 240);
+          text-decoration: underline;
+        }
+        &:focus {
+          padding: 30px;
+          font-family: "Ikaros-light";
+          color: rgb(181, 175, 175);
+          text-decoration: overline;
+        }
+      }
     }
   }
-}
-#phone,
-#dropdown,
-#dropdown-content {
-  .drpdwn {
-    display: flex;
-    padding: 30px;
-    font-family: "Ikaros-light";
-    color: rgb(245, 240, 240);
-    font-size: 2vw;
-    text-decoration: none;
-    justify-content: center;
-    border-bottom: 1px solid white;
-    border-radius: 5px;
-  }
-  a:hover {
-    padding: 30px;
-    font-family: "Ikaros-light";
-    color: rgb(181, 175, 175);
-    text-decoration: overline;
+  #phone {
     #dropdown {
-      display: none;
-      margin: auto;
-
-      #dropdown:hover #dropdown-content {
-        display: inline;
-      }
       #dropdown-content {
-        display: inline;
+        .drpdwn {
+          display: flex;
+          padding: 30px;
+          font-family: "Ikaros-light";
+          color: rgb(245, 240, 240);
+          font-size: $mainfontsizesmal;
+          text-decoration: none;
+          justify-content: center;
+          border-bottom: 1px solid white;
+          border-radius: 5px;
+        }
+        a:hover {
+          padding: 30px;
+          font-family: "Ikaros-light";
+          color: rgb(181, 175, 175);
+          text-decoration: overline;
+          #dropdown {
+            display: none;
+            margin: auto;
+
+            #dropdown:hover #dropdown-content {
+              display: inline;
+            }
+            #dropdown-content {
+              display: inline;
+            }
+          }
+        }
       }
     }
   }
-}
-
-// SECTIONS //
-
-section {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
 }
 
 #welcome-section {
   align-items: center;
   background-image: linear-gradient((black) 60%, rgb(16, 16, 16) 90%);
+
   .welcomebox {
     display: flex;
+    .content {
+      #lpb {
+        text-transform: uppercase;
+        letter-spacing: 5px;
+        color: white;
+        /* &:hover {
+          animation: slideAway 1s ease-in-out forwards;
+        } */
+      }
+    }
   }
-  .content #lpb {
-    text-transform: uppercase;
-    letter-spacing: 5px;
-  }
-
-  h2 {
-    margin: 0px;
-  }
-  p {
-    margin: 0px;
-    font-family: "ikaros-light";
-    font-size: 1.5em;
-    color: rgb(233, 233, 233);
-    text-align: center;
-    text-shadow: -3px 3px 8px rgb(42, 41, 41);
-  }
-}
-
-#menu:hover {
-  transform: rotateX(90deg);
 }
 
 #about-me {
@@ -132,35 +145,52 @@ section {
     rgb(255, 255, 255) 75%,
     rgb(228, 228, 228) 95%
   );
-  align-items: center;
 
-  h2 {
-    background-color: black;
-    color: white;
-    margin: 0px;
-  }
-  p {
-    color: black;
-    font-family: "ikaros-regular";
-    font-size: $mainfontsizesmal;
-  }
-  #picture {
-    display: flex;
-    margin-left: 15px;
-    margin-top: 5px;
+  .content {
+    #about {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
 
-    img {
-      width: auto;
-      max-width: 15vw;
-      height: auto;
-      max-height: 15vw;
-      border-radius: 50%;
-      box-shadow: 0px 0px 1px rgb(32, 32, 32);
+      h2 {
+        background-color: black;
+        color: white;
+        margin-bottom: 3vh;
+        border-radius: 10px;
+        min-width: 40vw;
+        text-transform: uppercase;
+      }
     }
-    img:hover {
-      box-shadow: 0px 0px 4px rgb(32, 32, 32);
-      animation: spin-in 1s ease-in-out forwards;
-      animation-direction: reverse;
+    p {
+      color: black;
+      font-family: "Ikaros-regular";
+      font-size: $mainfontsizesmal;
+      margin-top: 4vh;
+      text-align: center;
+    }
+
+    #picture {
+      display: flex;
+      margin-top: 5px;
+
+      img {
+        width: auto;
+        max-width: 15vw;
+        height: auto;
+        max-height: 15vw;
+        border-radius: 50%;
+        box-shadow: 0px 1px 2px rgb(32, 32, 32);
+        transition: 0.3s ease-in-out;
+
+        &:hover {
+          box-shadow: 0px 5px 10px rgb(32, 32, 32);
+          transform: scale(1.1) translate(-1%, 1%);
+        }
+      }
+    }
+    #arrow1 {
+      animation: bounce 1.5s ease infinite;
     }
   }
 }
@@ -169,33 +199,177 @@ section {
   display: flex;
   flex-direction: column;
   background-image: linear-gradient((black) 60%, rgb(16, 16, 16) 90%);
+  background-image: url(/icons&img/pexels-fauxels-3183150.jpg);
+  background-size: cover;
   align-items: center;
 
-  a {
-    text-decoration: none;
-    font-family: "ikaros-regular";
-    color: white;
-    font-style: italic;
-    font-weight: bold;
-  }
-  a:hover {
-    text-decoration: overline;
+  .content {
+    background-color: rgba(255, 255, 255, 0.867);
+    border-radius: 10em;
+
+    #video-text {
+      text-align: center;
+      max-height: 45vh;
+      padding: 10px;
+      h2 {
+        color: black;
+      }
+      p {
+        color: black;
+        font-family: "ikaros-regular";
+      }
+
+      a {
+        text-decoration: none;
+        font-family: "Ikaros-regular";
+        color: #f34f29;
+        font-style: italic;
+        font-weight: bold;
+        font-size: 1.2em;
+        transition: transform 0.3s ease-in-out;
+
+        &:hover {
+          color: #781904;
+          text-decoration: overline;
+          transition: 0.3s ease-in-out;
+        }
+        &:active {
+          color: #f34f29;
+          text-decoration: underline;
+        }
+        &:focus {
+          color: #781904;
+          text-decoration: overline;
+        }
+      }
+    }
   }
 }
 
-#resumé {
-  background-image: linear-gradient(
-    rgb(255, 255, 255) 75%,
-    rgb(228, 228, 228) 95%
-  );
-  .resumé-window {
+#resume {
+  background-image: linear-gradient(rgb(39, 39, 39) 80%, rgb(0, 0, 0) 100%);
+  .content {
+    display: flex;
+    justify-content: space-between;
+
+    #skills {
+      display: flex;
+      align-items: center;
+
+      border-right: 1px solid white;
+      table {
+        display: flex;
+        font-family: "ikaros-light";
+        text-align: left;
+        tbody {
+          tr {
+            padding: 2vh;
+            display: flex;
+            flex-flow: column;
+            max-width: 55vw;
+            th {
+              display: flex;
+              align-items: center;
+              color: white;
+              text-transform: uppercase;
+              img {
+                padding-right: 1vw;
+                width: 10%;
+                height: 10%;
+              }
+            }
+
+            .progress-bar {
+              max-width: 75vw;
+              height: 1vh;
+              margin-top: 2vh;
+              border-radius: 15px;
+              display: flex;
+              align-items: center;
+
+              div {
+                height: 1.3vh;
+                border-radius: 15px;
+                width: 0%;
+                display: flex;
+                align-items: center;
+                justify-content: right;
+                padding-left: 0%;
+                span {
+                  display: flex;
+                  border: 2px solid;
+                  font-family: "ikaros-regular";
+                  align-items: center;
+                  justify-content: center;
+
+                  font-size: 80%;
+                  border-radius: 50%;
+                  background-color: rgb(39, 39, 39);
+                  color: white;
+                  padding: 0.2em;
+                }
+
+                &.html {
+                  background-color: #e34c26;
+                  width: 65%;
+                  span {
+                    border-color: #e34c26;
+                  }
+                }
+                &.css {
+                  background-color: #2965f1;
+                  width: 70%;
+                  span {
+                    border-color: #2965f1;
+                  }
+                }
+                &.javascript {
+                  background-color: #ffc300;
+                  width: 30%;
+                  span {
+                    border-color: #ffc300;
+                  }
+                }
+                &.git {
+                  background-color: #f34f29;
+                  width: 45%;
+                  span {
+                    border-color: #f34f29;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .arrow {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column;
+    #arrow2 {
+      animation: bounce 1.5s ease infinite;
+    }
+
+    img {
+      background-color: white;
+      border-radius: 50%;
+      color: white;
+      width: 7%;
+      height: 7%;
+    }
+  }
+  .resume-window {
     position: fixed;
     background-color: rgba(0, 0, 0, 0.675);
     top: 0;
     right: 0;
     bottom: 0;
     left: 0;
-    z-index: 99999;
+    z-index: 1;
     visibility: hidden;
     transition: 2s forwards;
     &:target {
@@ -220,9 +394,9 @@ section {
     }
     .window-close {
       color: black;
-      font-family: "ikaros-light";
+      font-family: "Ikaros-light";
       line-height: 50px;
-      font-size: 80%;
+      font-size: $mainfontsizesmal;
       position: absolute;
       right: 0;
       text-align: center;
@@ -235,19 +409,33 @@ section {
     }
   }
   h2 {
-    color: black;
+    color: white;
+    margin: 1vh;
+    transition: 0.3s ease-in-out;
+    &:hover {
+      transform: scale(1.1) translate(0%, 1%);
+    }
+
+    &:focus {
+      transform: scale(1.1) translate(0%, 1%);
+    }
   }
   p {
-    color: black;
-    font-family: "ikaros-regular";
+    color: white;
+    font-family: "Ikaros-light";
     max-width: 40vw;
+    align-self: center;
+    margin-left: 3vw;
+    margin-right: 3vw;
+    text-align: center;
   }
 
   a {
     text-decoration: none;
+    text-align: center;
     :hover {
       text-decoration: overline;
-      text-decoration-color: black;
+      text-decoration-color: white;
     }
   }
 }
@@ -256,102 +444,93 @@ section {
   background-image: linear-gradient((black) 60%, rgb(16, 16, 16) 90%);
   text-align: center;
 
-  a {
-    font-family: "ikaros-regular";
-    text-decoration: none;
-    color: white;
-    padding-top: 3vh;
-  }
-  a:hover {
-    text-decoration: overline;
-  }
-  #thesong {
-    color: blue;
-    text-transform: lowercase;
-  }
-  #forloop {
-    text-transform: lowercase;
-    color: white;
-  }
-  h2 {
-    margin: 0;
-  }
-  h3 {
-    font-family: "ikaros-regular";
-    color: white;
-    letter-spacing: 3px;
-    font-size: 0.9em;
-  }
-  a {
-    padding: 0;
-  }
+  .content {
+    p {
+      align-self: bottom;
+    }
+    h2 {
+      margin: 0;
 
-  #icons {
-    align-items: center;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    min-width: 50vw;
-    margin-top: 5vh;
-    #mail {
+      color: white;
+    }
+    #green-for {
+      color: rgb(34, 255, 0);
+      text-transform: lowercase;
+    }
+    #for-statement {
+      text-transform: lowercase;
+      color: white;
+    }
+
+    #icons {
+      align-items: center;
       display: flex;
-      justify-content: center;
-      transition: transform 0.3s ease-in-out;
-      &:hover {
-        transform: scale(1.2) translate(-1%, 1%);
-      }
-    }
-    #callme {
-      &:hover {
-        animation: vibrate 0.5s infinite;
-      }
-    }
 
-    #lkdin {
-      transition: transform 1s ease-in-out;
-      &:hover {
-        transform: rotate(180deg);
-      }
-    }
+      justify-content: space-between;
+      max-width: 70vw;
+      min-width: 30vw;
+      padding-top: 5vh;
+      margin: auto;
 
-    .icon-box {
-      min-height: 8vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      p {
-        font-size: 1vw;
-        align-self: bottom;
+      #mail {
+        img {
+          max-block-size: 2em;
+        }
+        display: flex;
+        justify-content: center;
+        transition: transform 0.3s ease-in-out;
+        &:hover {
+          transform: scale(1.2) translate(-1%, 1%);
+        }
+      }
+      #callme {
+        img {
+          max-block-size: 2em;
+        }
+        &:hover {
+          animation: vibrate 0.5s infinite;
+        }
+      }
+
+      #lkdin {
+        img {
+          max-block-size: 2em;
+        }
+        transition: transform 1s ease-in-out;
+        &:hover {
+          transform: rotate(180deg);
+        }
+      }
+
+      .icon-box {
+        min-height: 8vh;
+        display: flex;
+        flex-direction: column;
+
+        p {
+          align-self: bottom;
+        }
       }
     }
   }
 }
 // DIVS //
+section {
+  .content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 15vw;
+    padding-right: 15vw;
 
-.content {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  animation: slide-up 1s forwards;
-  p {
-    color: white;
+    p {
+      color: white;
+    }
   }
 }
-
 // TEXT //
 
 h2 {
   font-family: "Ikaros-regular";
-  color: rgb(233, 233, 233);
   text-align: center;
-}
-
-#mail {
-  font-size: 20px;
-  color: rgb(233, 233, 233);
-  font-family: "ikaros-light";
-}
-
-#form {
-  border-radius: 10px;
 }

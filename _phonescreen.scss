@@ -1,164 +1,6 @@
 $mainfontsizesmal: 0.5em;
 $mainfontsizebig: 1.1em;
 @media screen and (max-width: 430px) {
-  section {
-    min-width: 310px;
-    text-transform: uppercase;
-    p {
-      font-family: "Ikaros-light";
-      font-size: $mainfontsizesmal;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-    }
-  }
-  .content {
-    padding-left: 15vw;
-    padding-right: 15vw;
-  }
-  header {
-    margin: auto;
-  }
-  #welcome-section {
-    .content {
-      animation: fadeEffect2 2s ease-in-out forwards;
-
-      #lpb {
-        font-size: $mainfontsizebig;
-        animation: fadeEffect2 2s ease-in-out forwards;
-      }
-      p {
-        align-self: center;
-        margin: 0px;
-        text-shadow: -3px 3px 8px rgb(42, 41, 41);
-      }
-    }
-  }
-  #about-me {
-    .content {
-      flex-direction: column-reverse;
-      justify-content: space-between;
-      min-height: 30vh;
-      padding-top: 5vh;
-      padding-bottom: 5vh;
-      #article {
-        display: flex;
-        flex-flow: column;
-        align-items: center;
-        p {
-          font-size: $mainfontsizesmal;
-
-          margin: 0;
-        }
-        #about {
-          h2 {
-            font-size: $mainfontsizebig;
-          }
-          p {
-            font-size: $mainfontsizesmal;
-          }
-        }
-        iframe {
-          margin-top: 3vh;
-          max-width: 64vw;
-          order: 1;
-        }
-      }
-      .clickIG {
-        #picture {
-          align-self: center;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          flex-direction: column;
-          margin-bottom: 1vh;
-          p {
-            font-size: $mainfontsizesmal;
-            text-decoration: underline;
-            margin: 0;
-          }
-        }
-        #ig-link {
-          border-radius: 50%;
-          max-width: 40vw;
-        }
-        #arrow {
-          display: flex;
-          flex-flow: column;
-          align-items: center;
-          #arrow1 {
-            width: 3vw;
-            margin-bottom: 0.5vh;
-          }
-          p {
-            font-size: $mainfontsizesmal;
-
-            margin: 0;
-          }
-        }
-      }
-    }
-  }
-  #projects {
-    .content {
-      max-width: 50vw;
-    }
-    h2 {
-      font-size: $mainfontsizebig;
-    }
-  }
-  #resume {
-    .content {
-      flex-flow: column-reverse;
-      #arrow2 {
-        animation: bounce 1.5s ease infinite;
-      }
-      #skills {
-        align-self: center;
-        font-size: $mainfontsizesmal;
-        span {
-          min-height: 2vh;
-          min-width: 4vw;
-        }
-      }
-      h2 {
-        font-size: $mainfontsizebig;
-      }
-      p {
-        max-width: 64vw;
-      }
-    }
-  }
-  #contact {
-    .content {
-      a {
-        h2 {
-          font-size: $mainfontsizebig;
-        }
-      }
-      p {
-        font-size: $mainfontsizesmal;
-      }
-
-      #icons {
-        flex-direction: column;
-        .icon-box {
-          div {
-            height: 4vh;
-            a {
-              img {
-                min-width: 0.1vw;
-                max-width: 7vw;
-              }
-            }
-            p {
-              font-size: $mainfontsizesmal;
-            }
-          }
-        }
-      }
-    }
-  }
-
   // DROPDOWN MENU //
   header {
     border-radius: 0px 0px 5px 5px;
@@ -215,4 +57,219 @@ $mainfontsizebig: 1.1em;
       }
     }
   }
+  section {
+    min-width: 310px;
+    p {
+      font-size: $mainfontsizesmal;
+    }
+  }
+  .content {
+    padding-left: 15vw;
+    padding-right: 15vw;
+  }
+  header {
+    margin: auto;
+  }
+
+  // WELCOME SECTION //
+
+  #welcome-section {
+    #lpb {
+      font-size: $mainfontsizebig;
+      animation: fadeEffect2 2s ease-in-out forwards;
+    }
+    p {
+      align-self: center;
+      margin: 0px;
+      text-shadow: -3px 3px 8px rgb(42, 41, 41);
+    }
+  }
+
+  // ABOUT ME SECTION //
+
+  #about-me {
+    .content {
+      flex-direction: column-reverse;
+      justify-content: space-between;
+
+      #article {
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+        p {
+          font-size: $mainfontsizesmal;
+          margin: 0;
+        }
+        #about {
+          h2 {
+            font-size: $mainfontsizebig;
+          }
+          p {
+            font-size: $mainfontsizesmal;
+          }
+        }
+        iframe {
+          margin-top: 3vh;
+          max-width: 64vw;
+          order: 1;
+        }
+      }
+      .clickIG {
+        #picture {
+          align-self: center;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          flex-direction: column;
+          margin-bottom: 1vh;
+          p {
+            font-size: $mainfontsizesmal;
+            text-decoration: underline;
+            margin: 0;
+          }
+        }
+        #ig-link {
+          border-radius: 50%;
+          max-width: 40vw;
+        }
+        #arrow {
+          display: flex;
+          flex-flow: column;
+          align-items: center;
+          #arrow1 {
+            width: 3vw;
+            margin-bottom: 0.5vh;
+          }
+          p {
+            font-size: $mainfontsizesmal;
+            margin: 0;
+          }
+        }
+      }
+    }
+  }
+
+  // PROJECTS SECTION //
+
+  #projects {
+    .content {
+      max-width: 50vw;
+    }
+    h2 {
+      font-size: $mainfontsizebig;
+    }
+  }
+
+  // MY RESUMÉ SECTION //
+
+  #resume {
+    .content {
+      flex-flow: column-reverse;
+      #skills {
+        align-self: center;
+        font-size: $mainfontsizesmal;
+        span {
+          min-height: 2vh;
+          min-width: 4vw;
+        }
+      }
+      h2 {
+        font-size: $mainfontsizebig;
+        padding-top: 5vh;
+      }
+      p {
+        max-width: 64vw;
+      }
+    }
+  }
+
+  // CONTACT SECTION //
+
+  #contact {
+    .content {
+      a {
+        h2 {
+          font-size: $mainfontsizebig;
+        }
+      }
+      p {
+        font-size: $mainfontsizesmal;
+      }
+
+      #icons {
+        flex-direction: column;
+        .icon-box {
+          div {
+            height: 4vh;
+            a {
+              img {
+                min-width: 0.1vw;
+                max-width: 7vw;
+              }
+            }
+            p {
+              font-size: $mainfontsizesmal;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  /*  // DROPDOWN MENU //
+  header {
+    border-radius: 0px 0px 5px 5px;
+  }
+  #phone {
+    display: flex;
+    border-radius: 20px;
+    #dropdown {
+      display: flex;
+      border-radius: 20px;
+      #hb-menu {
+        display: flex;
+        flex-direction: column;
+        width: 20vw;
+        hr {
+          width: 12vw;
+        }
+      }
+
+      #dropdown-content {
+        display: none;
+      }
+      &:hover {
+        hr {
+          animation: hb-smashed 1s forwards;
+        }
+        #dropdown-content {
+          max-width: 54vw;
+          display: block;
+          position: absolute;
+          top: 100%;
+          right: -10%;
+          left: -10%;
+          background-color: black;
+          font-family: "Ikaros-light";
+          color: rgb(245, 240, 240);
+          text-decoration: none;
+          justify-content: center;
+          border-radius: 5px;
+        }
+        a {
+          font-size: $mainfontsizesmal;
+          text-transform: uppercase;
+        }
+      }
+    }
+  }
+  #desktop {
+    display: none;
+    #desktop-nav {
+      display: none;
+      .buttons {
+        display: none;
+      }
+    }
+  } */
 }

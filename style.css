@@ -165,35 +165,23 @@
     min-width: 430px;
   }
   section p {
-    font-family: "Ikaros-light";
     font-size: 0.9em;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-  }
-  #welcome-section {
-    min-height: 80vh;
-    padding-top: 10vh;
   }
   #welcome-section #lpb {
     font-size: 4em;
     -webkit-animation: fadeEffect 2s ease-in-out forwards;
             animation: fadeEffect 2s ease-in-out forwards;
-    margin-bottom: 4vh;
   }
   #welcome-section p {
     align-self: center;
     margin: 0px;
-    text-shadow: -3px 3px 8px rgb(42, 41, 41);
   }
   #about-me {
-    min-height: 80vh;
     padding-top: 10vh;
   }
   #about-me .content {
-    display: flex;
     flex-direction: row;
     justify-content: space-between;
-    min-width: 60vw;
   }
   #about-me .content #article {
     display: flex;
@@ -251,9 +239,6 @@
     text-transform: uppercase;
     margin-bottom: 3vh;
   }
-  #projects .content #video-text p {
-    margin-bottom: 8vh;
-  }
   #resume {
     padding-top: 10vh;
   }
@@ -282,15 +267,64 @@
   }
 }
 @media screen and (max-width: 430px) {
-  section {
-    min-width: 310px;
-    text-transform: uppercase;
+  header {
+    border-radius: 0px 0px 5px 5px;
   }
-  section p {
+  #phone {
+    display: flex;
+    border-radius: 20px;
+  }
+  #phone #dropdown {
+    display: flex;
+    border-radius: 20px;
+  }
+  #phone #dropdown #hb-menu {
+    display: flex;
+    flex-direction: column;
+    width: 20vw;
+  }
+  #phone #dropdown #hb-menu hr {
+    width: 12vw;
+  }
+  #phone #dropdown #dropdown-content {
+    display: none;
+  }
+  #phone #dropdown:hover hr {
+    -webkit-animation: hb-smashed 1s forwards;
+            animation: hb-smashed 1s forwards;
+  }
+  #phone #dropdown:hover #dropdown-content {
+    max-width: 54vw;
+    display: block;
+    position: absolute;
+    top: 100%;
+    right: -10%;
+    left: -10%;
+    background-color: black;
     font-family: "Ikaros-light";
+    color: rgb(245, 240, 240);
+    text-decoration: none;
+    justify-content: center;
+    border-radius: 5px;
+  }
+  #phone #dropdown:hover a {
     font-size: 0.5em;
     text-transform: uppercase;
-    letter-spacing: 1px;
+  }
+  #desktop {
+    display: none;
+  }
+  #desktop #desktop-nav {
+    display: none;
+  }
+  #desktop #desktop-nav .buttons {
+    display: none;
+  }
+  section {
+    min-width: 310px;
+  }
+  section p {
+    font-size: 0.5em;
   }
   .content {
     padding-left: 15vw;
@@ -299,16 +333,12 @@
   header {
     margin: auto;
   }
-  #welcome-section .content {
-    -webkit-animation: fadeEffect2 2s ease-in-out forwards;
-            animation: fadeEffect2 2s ease-in-out forwards;
-  }
-  #welcome-section .content #lpb {
+  #welcome-section #lpb {
     font-size: 1.1em;
     -webkit-animation: fadeEffect2 2s ease-in-out forwards;
             animation: fadeEffect2 2s ease-in-out forwards;
   }
-  #welcome-section .content p {
+  #welcome-section p {
     align-self: center;
     margin: 0px;
     text-shadow: -3px 3px 8px rgb(42, 41, 41);
@@ -316,9 +346,6 @@
   #about-me .content {
     flex-direction: column-reverse;
     justify-content: space-between;
-    min-height: 30vh;
-    padding-top: 5vh;
-    padding-bottom: 5vh;
   }
   #about-me .content #article {
     display: flex;
@@ -379,10 +406,6 @@
   #resume .content {
     flex-flow: column-reverse;
   }
-  #resume .content #arrow2 {
-    -webkit-animation: bounce 1.5s ease infinite;
-            animation: bounce 1.5s ease infinite;
-  }
   #resume .content #skills {
     align-self: center;
     font-size: 0.5em;
@@ -393,6 +416,7 @@
   }
   #resume .content h2 {
     font-size: 1.1em;
+    padding-top: 5vh;
   }
   #resume .content p {
     max-width: 64vw;
@@ -416,59 +440,62 @@
   #contact .content #icons .icon-box div p {
     font-size: 0.5em;
   }
+  /*  // DROPDOWN MENU //
   header {
     border-radius: 0px 0px 5px 5px;
   }
   #phone {
     display: flex;
     border-radius: 20px;
-  }
-  #phone #dropdown {
-    display: flex;
-    border-radius: 20px;
-  }
-  #phone #dropdown #hb-menu {
-    display: flex;
-    flex-direction: column;
-    width: 20vw;
-  }
-  #phone #dropdown #hb-menu hr {
-    width: 12vw;
-  }
-  #phone #dropdown #dropdown-content {
-    display: none;
-  }
-  #phone #dropdown:hover hr {
-    -webkit-animation: hb-smashed 1s forwards;
-            animation: hb-smashed 1s forwards;
-  }
-  #phone #dropdown:hover #dropdown-content {
-    max-width: 54vw;
-    display: block;
-    position: absolute;
-    top: 100%;
-    right: -10%;
-    left: -10%;
-    background-color: black;
-    font-family: "Ikaros-light";
-    color: rgb(245, 240, 240);
-    text-decoration: none;
-    justify-content: center;
-    border-radius: 5px;
-  }
-  #phone #dropdown:hover a {
-    font-size: 0.5em;
-    text-transform: uppercase;
+    #dropdown {
+      display: flex;
+      border-radius: 20px;
+      #hb-menu {
+        display: flex;
+        flex-direction: column;
+        width: 20vw;
+        hr {
+          width: 12vw;
+        }
+      }
+
+      #dropdown-content {
+        display: none;
+      }
+      &:hover {
+        hr {
+          animation: hb-smashed 1s forwards;
+        }
+        #dropdown-content {
+          max-width: 54vw;
+          display: block;
+          position: absolute;
+          top: 100%;
+          right: -10%;
+          left: -10%;
+          background-color: black;
+          font-family: "Ikaros-light";
+          color: rgb(245, 240, 240);
+          text-decoration: none;
+          justify-content: center;
+          border-radius: 5px;
+        }
+        a {
+          font-size: $mainfontsizesmal;
+          text-transform: uppercase;
+        }
+      }
+    }
   }
   #desktop {
     display: none;
-  }
-  #desktop #desktop-nav {
-    display: none;
-  }
-  #desktop #desktop-nav .buttons {
-    display: none;
-  }
+    #desktop-nav {
+      display: none;
+      .buttons {
+        display: none;
+      }
+    }
+  } */
 }
 @font-face {
   font-family: "Ikaros-regular";
@@ -478,6 +505,15 @@
   font-family: "Ikaros-light";
   src: url(/fonts/Ikaros-Light.otf);
 }
+h2 {
+  font-family: "Ikaros-regular";
+  text-align: center;
+}
+
+p {
+  color: white;
+}
+
 body {
   display: flex;
   flex-direction: column;
@@ -486,16 +522,27 @@ body {
   background-color: black;
   background-size: cover;
   margin: 0%;
-  scroll-behavior: smooth;
 }
 body section {
   display: flex;
   flex-direction: column;
   justify-content: center;
   min-height: 85vh;
+  text-transform: uppercase;
 }
-
-header {
+body section .content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 15vw;
+  padding-right: 15vw;
+}
+body section .content p {
+  font-family: "Ikaros-light";
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+body header {
   flex-direction: row wrap;
   justify-content: center;
   position: -webkit-sticky;
@@ -505,11 +552,11 @@ header {
   z-index: 1;
 }
 @media screen and (min-width: 430px) {
-  header #phone {
+  body header #phone {
     display: none;
   }
 }
-header #desktop {
+body header #desktop {
   background-color: black;
   height: -webkit-fit-content;
   height: -moz-fit-content;
@@ -520,11 +567,11 @@ header #desktop {
   position: sticky;
   top: 0;
 }
-header #desktop #desktop-nav {
+body header #desktop #desktop-nav {
   display: flex;
   justify-content: center;
 }
-header #desktop #desktop-nav a {
+body header #desktop #desktop-nav a {
   display: flex;
   padding: 30px;
   font-family: "Ikaros-light";
@@ -534,25 +581,25 @@ header #desktop #desktop-nav a {
   justify-content: center;
   text-transform: uppercase;
 }
-header #desktop #desktop-nav a:hover {
+body header #desktop #desktop-nav a:hover {
   padding: 30px;
   font-family: "Ikaros-light";
   color: rgb(181, 175, 175);
   text-decoration: overline;
 }
-header #desktop #desktop-nav a:active {
+body header #desktop #desktop-nav a:active {
   padding: 30px;
   font-family: "Ikaros-light";
   color: rgb(245, 240, 240);
   text-decoration: underline;
 }
-header #desktop #desktop-nav a:focus {
+body header #desktop #desktop-nav a:focus {
   padding: 30px;
   font-family: "Ikaros-light";
   color: rgb(181, 175, 175);
   text-decoration: overline;
 }
-header #phone #dropdown #dropdown-content .drpdwn {
+body header #phone #dropdown #dropdown-content .drpdwn {
   display: flex;
   padding: 30px;
   font-family: "Ikaros-light";
@@ -563,49 +610,44 @@ header #phone #dropdown #dropdown-content .drpdwn {
   border-bottom: 1px solid white;
   border-radius: 5px;
 }
-header #phone #dropdown #dropdown-content a:hover {
+body header #phone #dropdown #dropdown-content a:hover {
   padding: 30px;
   font-family: "Ikaros-light";
   color: rgb(181, 175, 175);
   text-decoration: overline;
 }
-header #phone #dropdown #dropdown-content a:hover #dropdown {
+body header #phone #dropdown #dropdown-content a:hover #dropdown {
   display: none;
   margin: auto;
 }
-header #phone #dropdown #dropdown-content a:hover #dropdown #dropdown:hover #dropdown-content {
+body header #phone #dropdown #dropdown-content a:hover #dropdown #dropdown:hover #dropdown-content {
   display: inline;
 }
-header #phone #dropdown #dropdown-content a:hover #dropdown #dropdown-content {
+body header #phone #dropdown #dropdown-content a:hover #dropdown #dropdown-content {
   display: inline;
 }
-
-#welcome-section {
+body #welcome-section {
   align-items: center;
   background-image: linear-gradient(black 60%, rgb(16, 16, 16) 90%);
 }
-#welcome-section .welcomebox {
+body #welcome-section .welcomebox {
   display: flex;
 }
-#welcome-section .welcomebox .content #lpb {
+body #welcome-section .welcomebox .content #lpb {
   text-transform: uppercase;
   letter-spacing: 5px;
   color: white;
-  /* &:hover {
-    animation: slideAway 1s ease-in-out forwards;
-  } */
 }
-
-#about-me {
+body #about-me {
   background-image: linear-gradient(rgb(255, 255, 255) 75%, rgb(228, 228, 228) 95%);
 }
-#about-me .content #about {
+body #about-me .content #about {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
 }
-#about-me .content #about h2 {
+body #about-me .content #about h2 {
   background-color: black;
   color: white;
   margin-bottom: 3vh;
@@ -613,18 +655,18 @@ header #phone #dropdown #dropdown-content a:hover #dropdown #dropdown-content {
   min-width: 40vw;
   text-transform: uppercase;
 }
-#about-me .content p {
+body #about-me .content p {
   color: black;
   font-family: "Ikaros-regular";
   font-size: 0.9em;
   margin-top: 4vh;
   text-align: center;
 }
-#about-me .content #picture {
+body #about-me .content #picture {
   display: flex;
   margin-top: 5px;
 }
-#about-me .content #picture img {
+body #about-me .content #picture img {
   width: auto;
   max-width: 15vw;
   height: auto;
@@ -633,16 +675,15 @@ header #phone #dropdown #dropdown-content a:hover #dropdown #dropdown-content {
   box-shadow: 0px 1px 2px rgb(32, 32, 32);
   transition: 0.3s ease-in-out;
 }
-#about-me .content #picture img:hover {
+body #about-me .content #picture img:hover {
   box-shadow: 0px 5px 10px rgb(32, 32, 32);
   transform: scale(1.1) translate(-1%, 1%);
 }
-#about-me .content #arrow1 {
+body #about-me .content #arrow1 {
   -webkit-animation: bounce 1.5s ease infinite;
           animation: bounce 1.5s ease infinite;
 }
-
-#projects {
+body #projects {
   display: flex;
   flex-direction: column;
   background-image: linear-gradient(black 60%, rgb(16, 16, 16) 90%);
@@ -650,23 +691,23 @@ header #phone #dropdown #dropdown-content a:hover #dropdown #dropdown-content {
   background-size: cover;
   align-items: center;
 }
-#projects .content {
+body #projects .content {
   background-color: rgba(255, 255, 255, 0.867);
   border-radius: 10em;
 }
-#projects .content #video-text {
+body #projects .content #video-text {
   text-align: center;
   max-height: 45vh;
   padding: 10px;
 }
-#projects .content #video-text h2 {
+body #projects .content #video-text h2 {
   color: black;
 }
-#projects .content #video-text p {
+body #projects .content #video-text p {
   color: black;
   font-family: "ikaros-regular";
 }
-#projects .content #video-text a {
+body #projects .content #video-text a {
   text-decoration: none;
   font-family: "Ikaros-regular";
   color: #f34f29;
@@ -675,55 +716,54 @@ header #phone #dropdown #dropdown-content a:hover #dropdown #dropdown-content {
   font-size: 1.2em;
   transition: transform 0.3s ease-in-out;
 }
-#projects .content #video-text a:hover {
+body #projects .content #video-text a:hover {
   color: #781904;
   text-decoration: overline;
   transition: 0.3s ease-in-out;
 }
-#projects .content #video-text a:active {
+body #projects .content #video-text a:active {
   color: #f34f29;
   text-decoration: underline;
 }
-#projects .content #video-text a:focus {
+body #projects .content #video-text a:focus {
   color: #781904;
   text-decoration: overline;
 }
-
-#resume {
+body #resume {
   background-image: linear-gradient(rgb(39, 39, 39) 80%, rgb(0, 0, 0) 100%);
 }
-#resume .content {
+body #resume .content {
   display: flex;
   justify-content: space-between;
 }
-#resume .content #skills {
+body #resume .content #skills {
   display: flex;
   align-items: center;
   border-right: 1px solid white;
 }
-#resume .content #skills table {
+body #resume .content #skills table {
   display: flex;
   font-family: "ikaros-light";
   text-align: left;
 }
-#resume .content #skills table tbody tr {
+body #resume .content #skills table tbody tr {
   padding: 2vh;
   display: flex;
   flex-flow: column;
   max-width: 55vw;
 }
-#resume .content #skills table tbody tr th {
+body #resume .content #skills table tbody tr th {
   display: flex;
   align-items: center;
   color: white;
   text-transform: uppercase;
 }
-#resume .content #skills table tbody tr th img {
+body #resume .content #skills table tbody tr th img {
   padding-right: 1vw;
   width: 10%;
   height: 10%;
 }
-#resume .content #skills table tbody tr .progress-bar {
+body #resume .content #skills table tbody tr .progress-bar {
   max-width: 75vw;
   height: 1vh;
   margin-top: 2vh;
@@ -731,7 +771,7 @@ header #phone #dropdown #dropdown-content a:hover #dropdown #dropdown-content {
   display: flex;
   align-items: center;
 }
-#resume .content #skills table tbody tr .progress-bar div {
+body #resume .content #skills table tbody tr .progress-bar div {
   height: 1.3vh;
   border-radius: 15px;
   width: 0%;
@@ -740,7 +780,7 @@ header #phone #dropdown #dropdown-content a:hover #dropdown #dropdown-content {
   justify-content: right;
   padding-left: 0%;
 }
-#resume .content #skills table tbody tr .progress-bar div span {
+body #resume .content #skills table tbody tr .progress-bar div span {
   display: flex;
   border: 2px solid;
   font-family: "ikaros-regular";
@@ -752,52 +792,52 @@ header #phone #dropdown #dropdown-content a:hover #dropdown #dropdown-content {
   color: white;
   padding: 0.2em;
 }
-#resume .content #skills table tbody tr .progress-bar div.html {
+body #resume .content #skills table tbody tr .progress-bar div.html {
   background-color: #e34c26;
   width: 65%;
 }
-#resume .content #skills table tbody tr .progress-bar div.html span {
+body #resume .content #skills table tbody tr .progress-bar div.html span {
   border-color: #e34c26;
 }
-#resume .content #skills table tbody tr .progress-bar div.css {
+body #resume .content #skills table tbody tr .progress-bar div.css {
   background-color: #2965f1;
   width: 70%;
 }
-#resume .content #skills table tbody tr .progress-bar div.css span {
+body #resume .content #skills table tbody tr .progress-bar div.css span {
   border-color: #2965f1;
 }
-#resume .content #skills table tbody tr .progress-bar div.javascript {
+body #resume .content #skills table tbody tr .progress-bar div.javascript {
   background-color: #ffc300;
   width: 30%;
 }
-#resume .content #skills table tbody tr .progress-bar div.javascript span {
+body #resume .content #skills table tbody tr .progress-bar div.javascript span {
   border-color: #ffc300;
 }
-#resume .content #skills table tbody tr .progress-bar div.git {
+body #resume .content #skills table tbody tr .progress-bar div.git {
   background-color: #f34f29;
   width: 45%;
 }
-#resume .content #skills table tbody tr .progress-bar div.git span {
+body #resume .content #skills table tbody tr .progress-bar div.git span {
   border-color: #f34f29;
 }
-#resume .arrow {
+body #resume .arrow {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-flow: column;
 }
-#resume .arrow #arrow2 {
+body #resume .arrow #arrow2 {
   -webkit-animation: bounce 1.5s ease infinite;
           animation: bounce 1.5s ease infinite;
 }
-#resume .arrow img {
+body #resume .arrow img {
   background-color: white;
   border-radius: 50%;
   color: white;
   width: 7%;
   height: 7%;
 }
-#resume .resume-window {
+body #resume .resume-window {
   position: fixed;
   background-color: rgba(0, 0, 0, 0.675);
   top: 0;
@@ -808,11 +848,11 @@ header #phone #dropdown #dropdown-content a:hover #dropdown #dropdown-content {
   visibility: hidden;
   transition: 2s forwards;
 }
-#resume .resume-window:target {
+body #resume .resume-window:target {
   visibility: visible;
   opacity: 1;
 }
-#resume .resume-window div {
+body #resume .resume-window div {
   display: flex;
   position: absolute;
   top: 50%;
@@ -823,11 +863,11 @@ header #phone #dropdown #dropdown-content a:hover #dropdown #dropdown-content {
   justify-content: center;
   align-items: center;
 }
-#resume .resume-window div img {
+body #resume .resume-window div img {
   max-width: 100%;
   max-height: 90vh;
 }
-#resume .resume-window .window-close {
+body #resume .resume-window .window-close {
   color: black;
   font-family: "Ikaros-light";
   line-height: 50px;
@@ -839,21 +879,21 @@ header #phone #dropdown #dropdown-content a:hover #dropdown #dropdown-content {
   width: 70px;
   text-decoration: none;
 }
-#resume .resume-window .window-close:hover {
+body #resume .resume-window .window-close:hover {
   color: grey;
 }
-#resume h2 {
+body #resume h2 {
   color: white;
   margin: 1vh;
   transition: 0.3s ease-in-out;
 }
-#resume h2:hover {
+body #resume h2:hover {
   transform: scale(1.1) translate(0%, 1%);
 }
-#resume h2:focus {
+body #resume h2:focus {
   transform: scale(1.1) translate(0%, 1%);
 }
-#resume p {
+body #resume p {
   color: white;
   font-family: "Ikaros-light";
   max-width: 40vw;
@@ -862,36 +902,35 @@ header #phone #dropdown #dropdown-content a:hover #dropdown #dropdown-content {
   margin-right: 3vw;
   text-align: center;
 }
-#resume a {
+body #resume a {
   text-decoration: none;
   text-align: center;
 }
-#resume a :hover {
+body #resume a :hover {
   text-decoration: overline;
   -webkit-text-decoration-color: white;
           text-decoration-color: white;
 }
-
-#contact {
+body #contact {
   background-image: linear-gradient(black 60%, rgb(16, 16, 16) 90%);
   text-align: center;
 }
-#contact .content p {
+body #contact .content p {
   align-self: bottom;
 }
-#contact .content h2 {
+body #contact .content h2 {
   margin: 0;
   color: white;
 }
-#contact .content #green-for {
+body #contact .content #green-for {
   color: rgb(34, 255, 0);
   text-transform: lowercase;
 }
-#contact .content #for-statement {
+body #contact .content #for-statement {
   text-transform: lowercase;
   color: white;
 }
-#contact .content #icons {
+body #contact .content #icons {
   align-items: center;
   display: flex;
   justify-content: space-between;
@@ -900,54 +939,38 @@ header #phone #dropdown #dropdown-content a:hover #dropdown #dropdown-content {
   padding-top: 5vh;
   margin: auto;
 }
-#contact .content #icons #mail {
+body #contact .content #icons #mail {
   display: flex;
   justify-content: center;
   transition: transform 0.3s ease-in-out;
 }
-#contact .content #icons #mail img {
+body #contact .content #icons #mail img {
   max-block-size: 2em;
 }
-#contact .content #icons #mail:hover {
+body #contact .content #icons #mail:hover {
   transform: scale(1.2) translate(-1%, 1%);
 }
-#contact .content #icons #callme img {
+body #contact .content #icons #callme img {
   max-block-size: 2em;
 }
-#contact .content #icons #callme:hover {
+body #contact .content #icons #callme:hover {
   -webkit-animation: vibrate 0.5s infinite;
           animation: vibrate 0.5s infinite;
 }
-#contact .content #icons #lkdin {
+body #contact .content #icons #lkdin {
   transition: transform 1s ease-in-out;
 }
-#contact .content #icons #lkdin img {
+body #contact .content #icons #lkdin img {
   max-block-size: 2em;
 }
-#contact .content #icons #lkdin:hover {
+body #contact .content #icons #lkdin:hover {
   transform: rotate(180deg);
 }
-#contact .content #icons .icon-box {
+body #contact .content #icons .icon-box {
   min-height: 8vh;
   display: flex;
   flex-direction: column;
 }
-#contact .content #icons .icon-box p {
+body #contact .content #icons .icon-box p {
   align-self: bottom;
-}
-
-section .content {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding-left: 15vw;
-  padding-right: 15vw;
-}
-section .content p {
-  color: white;
-}
-
-h2 {
-  font-family: "Ikaros-regular";
-  text-align: center;
 }/*# sourceMappingURL=style.css.map */

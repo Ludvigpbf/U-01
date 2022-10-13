@@ -4,36 +4,30 @@ $mainfontsizebig: 4em;
   section {
     min-width: 430px;
     p {
-      font-family: "Ikaros-light";
       font-size: $mainfontsizesmal;
-      text-transform: uppercase;
-      letter-spacing: 1px;
     }
   }
 
+  // WELCOME SECTION //
+
   #welcome-section {
-    min-height: 80vh;
-    padding-top: 10vh;
     #lpb {
       font-size: $mainfontsizebig;
       animation: fadeEffect 2s ease-in-out forwards;
-      margin-bottom: 4vh;
     }
     p {
       align-self: center;
       margin: 0px;
-      text-shadow: -3px 3px 8px rgb(42, 41, 41);
     }
   }
 
+  // ABOUT ME SECTION //
+
   #about-me {
-    min-height: 80vh;
     padding-top: 10vh;
     .content {
-      display: flex;
       flex-direction: row;
       justify-content: space-between;
-      min-width: 60vw;
       #article {
         display: flex;
         justify-content: center;
@@ -72,7 +66,6 @@ $mainfontsizebig: 4em;
         }
         #arrow {
           display: flex;
-
           flex-flow: column;
           align-items: center;
           #arrow1 {
@@ -85,6 +78,9 @@ $mainfontsizebig: 4em;
       }
     }
   }
+
+  // PROJECTS SECTION //
+
   #projects {
     padding-top: 10vh;
     .content {
@@ -94,12 +90,12 @@ $mainfontsizebig: 4em;
           text-transform: uppercase;
           margin-bottom: 3vh;
         }
-        p {
-          margin-bottom: 8vh;
-        }
       }
     }
   }
+
+  // MY RESUMÉ SECTION //
+
   #resume {
     padding-top: 10vh;
     .content {
@@ -116,6 +112,9 @@ $mainfontsizebig: 4em;
       font-size: $mainfontsizebig;
     }
   }
+
+  // CONTACT SECTION //
+
   #contact {
     h2 {
       text-transform: uppercase;

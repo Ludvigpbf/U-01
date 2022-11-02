@@ -3,14 +3,13 @@
 @import "_phonescreen.scss";
 
 // TEXT //
-
 @font-face {
   font-family: "Ikaros-regular";
-  src: url(/fonts/Ikaros-Regular.otf);
+  src: url(./fonts/Ikaros-Regular.otf);
 }
 @font-face {
   font-family: "Ikaros-light";
-  src: url(/fonts/Ikaros-Light.otf);
+  src: url(./fonts/Ikaros-Light.otf);
 }
 $mainfontsizesmal: 0.9em;
 $mainfontsizebig: 4em;
@@ -226,8 +225,8 @@ body {
   #projects {
     display: flex;
     flex-direction: column;
-    background-image: linear-gradient((black) 60%, rgb(16, 16, 16) 90%);
-    background-image: url(/icons&img/pexels-fauxels-3183150.jpg);
+    // background-image: linear-gradient((black) 60%, rgb(16, 16, 16) 90%);
+    background-image: url(./icons&img/pexels-fauxels-3183150.jpg);
     background-size: cover;
     align-items: center;
 

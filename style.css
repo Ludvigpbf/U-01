@@ -154,11 +154,11 @@
 }
 @font-face {
   font-family: "Ikaros-regular";
-  src: url(/fonts/Ikaros-Regular.otf);
+  src: url(../fonts/Ikaros-Regular.otf);
 }
 @font-face {
   font-family: "Ikaros-light";
-  src: url(/fonts/Ikaros-Light.otf);
+  src: url(../fonts/Ikaros-Light.otf);
 }
 @media screen and (min-width: 430px) {
   section {
@@ -441,70 +441,14 @@
   #contact .content #icons .icon-box div p {
     font-size: 0.5em;
   }
-  /*  // DROPDOWN MENU //
-  header {
-    border-radius: 0px 0px 5px 5px;
-  }
-  #phone {
-    display: flex;
-    border-radius: 20px;
-    #dropdown {
-      display: flex;
-      border-radius: 20px;
-      #hb-menu {
-        display: flex;
-        flex-direction: column;
-        width: 20vw;
-        hr {
-          width: 12vw;
-        }
-      }
-
-      #dropdown-content {
-        display: none;
-      }
-      &:hover {
-        hr {
-          animation: hb-smashed 1s forwards;
-        }
-        #dropdown-content {
-          max-width: 54vw;
-          display: block;
-          position: absolute;
-          top: 100%;
-          right: -10%;
-          left: -10%;
-          background-color: black;
-          font-family: "Ikaros-light";
-          color: rgb(245, 240, 240);
-          text-decoration: none;
-          justify-content: center;
-          border-radius: 5px;
-        }
-        a {
-          font-size: $mainfontsizesmal;
-          text-transform: uppercase;
-        }
-      }
-    }
-  }
-  #desktop {
-    display: none;
-    #desktop-nav {
-      display: none;
-      .buttons {
-        display: none;
-      }
-    }
-  } */
 }
 @font-face {
   font-family: "Ikaros-regular";
-  src: url(/fonts/Ikaros-Regular.otf);
+  src: url(./fonts/Ikaros-Regular.otf);
 }
 @font-face {
   font-family: "Ikaros-light";
-  src: url(/fonts/Ikaros-Light.otf);
+  src: url(./fonts/Ikaros-Light.otf);
 }
 h2 {
   font-family: "Ikaros-regular";
@@ -687,8 +631,7 @@ body #about-me .content #arrow1 {
 body #projects {
   display: flex;
   flex-direction: column;
-  background-image: linear-gradient(black 60%, rgb(16, 16, 16) 90%);
-  background-image: url(/icons&img/pexels-fauxels-3183150.jpg);
+  background-image: url(./icons&img/pexels-fauxels-3183150.jpg);
   background-size: cover;
   align-items: center;
 }

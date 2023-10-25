@@ -1,5 +1,5 @@
 # My first project
-This is the first project on my way to become a Full-stack Developer. It was a fun project wich i really enjoyed making. I got the grade **Weel Approved** wich is the highest grade.
+This is the first project on my way to become a Full-stack Developer. It was a fun project wich i really enjoyed making. I got the grade **Well Approved** wich is the highest grade.
 
 ## Description of the task:
 Soon you will be full stack developers and every developer should have their own online resume and portfolio. 

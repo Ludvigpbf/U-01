@@ -1,6 +1,6 @@
 ---
 deployment:
   tasks:
-    - export DEPLOYPATH=/home/flycnsib/public_html/
+    - export DEPLOYPATH=/home/flycnsib/public_html/repositories/U-01/
     - /bin/cp index.html $DEPLOYPATH
     - /bin/cp style.css $DEPLOYPATH
